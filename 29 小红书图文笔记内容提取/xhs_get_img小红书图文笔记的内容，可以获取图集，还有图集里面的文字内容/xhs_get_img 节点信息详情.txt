@@ -1,0 +1,766 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7492589740497436713",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "182354",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 315.53333333333336,
+            "y": -142.1833333333333
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "输入视频平台的分享链接",
+            "icon": "https://p3-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/f1b318f1caf547a68fff70586eda764d~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1747096571&x-signature=Lxnn4EZJJJtfDArot5mb11FNY7c%3D",
+            "subtitle": "视频全平台下载:download",
+            "title": "download"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7487889088326991887",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "download",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7377228668269084672",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频全平台下载",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "73 【是谁在把打工人逼成策略“缝合怪”？ - 饭团蛋蛋 | 小红书 - 你的生活指南】 ???? 5OPImWUsRmRXRHp ???? https://www.xiaohongshu.com/discovery/item/67f4951a000000000b02e1e3?source=webshare&xhsshare=pc_web&xsec_token=ABO_bdD4C2Hjbjp99a_FTbZ7my-9Ne9FibsGzIoQSh798=&xsec_source=pc_share",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "cffe3577-b5c4-4d1e-a15c-9290a81d9383",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "photo",
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "pics",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "test",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "title",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "float",
+              "name": "exec_time",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "ip",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 135.53333333333336,
+            "y": -142.1833333333333,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1717643723692214488_3H8mcHZsvv.webp?lk3s=cd508e2b&x-expires=1750402213&x-signature=ybzsgvpYCv3rXLjHXFnXtQskYCI%3D",
+            "apiName": "download",
+            "pluginID": "7377228668269084672",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7373865327308144674",
+            "inputs": [
+              {
+                "description": "获取地址：https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "视频的分享链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "title",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "url",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "photo",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "pics",
+                    "required": false,
+                    "schema": {
+                      "assistType": 0,
+                      "type": "string"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "test",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "exec_time",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "input": {},
+                "name": "ip",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              }
+            ],
+            "updateTime": 1747804273,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "输入视频平台的分享链接",
+            "title": "download",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "128941",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 255.53333333333336,
+            "y": 83.10422288917243
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"提取pic返回的内容，是小红书的图集\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 135.53333333333336,
+            "y": 83.10422288917243,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "143220",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 819.780563531732,
+            "y": -128.4002838147328
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "【OCR火山版】是一个强大的光学字符识别（OCR）插件，提供两种主要工具：常规OCR工具和多语言OCR工具。该插件能够从图像或PDF文档中提取文本信息，支持多种语言，适用于各种应用场景。",
+            "icon": "https://p6-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/2d2f6acf3d7142b68334cebbd6378597~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1747099203&x-signature=p8XQLLYjaz7LbcZrdDY3JfXxJFw%3D",
+            "subtitle": "OCR火山版:general_ocr",
+            "title": "general_ocr"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7454457295544778786",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "general_ocr",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7454457295544762402",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "OCR火山版",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "batch": {
+              "batchEnable": true,
+              "batchSize": 100,
+              "concurrentSize": 10,
+              "inputLists": [
+                {
+                  "name": "item1",
+                  "input": {
+                    "type": "list",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "182354",
+                        "name": "data.pics"
+                      },
+                      "rawMeta": {
+                        "type": 99
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "143220",
+                      "name": "item1"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "outputList",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "string",
+                    "name": "msg",
+                    "required": false,
+                    "description": "错误信息"
+                  },
+                  {
+                    "type": "float",
+                    "name": "code",
+                    "required": false,
+                    "description": "错误码"
+                  },
+                  {
+                    "type": "object",
+                    "name": "data",
+                    "schema": [
+                      {
+                        "type": "list",
+                        "name": "line_rects",
+                        "schema": {
+                          "type": "object",
+                          "schema": [
+                            {
+                              "type": "float",
+                              "name": "height",
+                              "required": false,
+                              "description": "宽"
+                            },
+                            {
+                              "type": "float",
+                              "name": "width",
+                              "required": false,
+                              "description": "长"
+                            },
+                            {
+                              "type": "float",
+                              "name": "x",
+                              "required": false,
+                              "description": "x轴坐标"
+                            },
+                            {
+                              "type": "float",
+                              "name": "y",
+                              "required": false,
+                              "description": "y轴坐标"
+                            }
+                          ]
+                        },
+                        "required": false,
+                        "description": "文本行位置\t"
+                      },
+                      {
+                        "type": "list",
+                        "name": "line_texts",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false,
+                        "description": "识别结果\t"
+                      }
+                    ],
+                    "required": false,
+                    "description": "识别结果"
+                  },
+                  {
+                    "type": "string",
+                    "name": "log_id",
+                    "required": false,
+                    "description": "日志id"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 639.780563531732,
+            "y": -128.4002838147328,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/372098605791453_1735625990668066734_wb4EWXENtf.jpeg?lk3s=cd508e2b&x-expires=1750402213&x-signature=AlB6f29QyZivHe5vehk%2FD8hGkM8%3D",
+            "apiName": "general_ocr",
+            "pluginID": "7454457295544762402",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "image或pdf链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "错误信息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "识别结果",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "文本行位置\t",
+                    "input": {},
+                    "name": "line_rects",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "description": "宽",
+                          "input": {},
+                          "name": "height",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "长",
+                          "input": {},
+                          "name": "width",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "x轴坐标",
+                          "input": {},
+                          "name": "x",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "y轴坐标",
+                          "input": {},
+                          "name": "y",
+                          "required": false,
+                          "type": "float"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "description": "识别结果\t",
+                    "input": {},
+                    "name": "line_texts",
+                    "required": false,
+                    "schema": {
+                      "assistType": 0,
+                      "type": "string"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志id",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747806583,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "通用文字识别服务提供「从图片到文字」的完整解决方案，可识别中英文内容，不仅在高并发环境下以毫秒级的速度进行识别，还可精准识别截图、扫描、拍照、视频抽帧等多类型图片。",
+            "title": "general_ocr",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "107287",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 770.3807342370917,
+            "y": 74.85964567389259
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"提取图片里面的文字内容\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 650.3807342370917,
+            "y": 74.85964567389259,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "182354",
+        "targetNodeID": "143220"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 135.53333333333336,
+    "y": -142.1833333333333,
+    "width": 864.2472301983987,
+    "height": 375.2875562225057
+  }
+}

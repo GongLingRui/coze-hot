@@ -1,0 +1,1210 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7492669917888970803",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "164852",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": -101.06157188556253,
+            "y": -96.74083354382077
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"输入token和小红书的主页链接\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"就能提取主页的数据\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"一次提取20个，根据返回的lastCursor\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"进行分页提取\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": -221.06157188556253,
+            "y": -96.74083354382077,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "161823",
+        "type": "21",
+        "meta": {
+          "position": {
+            "x": 714.980833254511,
+            "y": -268.7270490261559
+          },
+          "canvasPosition": {
+            "x": 129.90108172149036,
+            "y": 150.054490952043
+          }
+        },
+        "data": {
+          "inputs": {
+            "inputParameters": [],
+            "loopCount": {
+              "type": "integer",
+              "value": {
+                "type": "literal",
+                "content": 3,
+                "rawMeta": {
+                  "type": 2
+                }
+              }
+            },
+            "loopType": "infinite",
+            "variableParameters": [
+              {
+                "name": "var_lastCursor",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "lastCursor"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "nodeMeta": {
+            "description": "用于通过设定循环次数和逻辑，重复执行一系列任务",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Loop-v2.jpg",
+            "mainColor": "#00B2B2",
+            "subTitle": "循环",
+            "title": "循环"
+          },
+          "outputs": [
+            {
+              "name": "datas",
+              "input": {
+                "type": "list",
+                "schema": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "ref",
+                  "content": {
+                    "source": "block-output",
+                    "blockID": "195033",
+                    "name": "last_cursor"
+                  },
+                  "rawMeta": {
+                    "type": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "blocks": [
+          {
+            "id": "195033",
+            "type": "4",
+            "meta": {
+              "position": {
+                "x": 0,
+                "y": 100
+              }
+            },
+            "data": {
+              "nodeMeta": {
+                "description": "获取用户笔记",
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+                "subtitle": "小红书工具:get_user_note",
+                "title": "get_user_note_1"
+              },
+              "inputs": {
+                "apiParam": [
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "7492627931890614309",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "apiID"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "get_user_note",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "apiName"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "7492627931890597925",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "pluginID"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "小红书工具",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "pluginName"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "pluginVersion"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "tips"
+                  },
+                  {
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "content": "",
+                        "rawMeta": {
+                          "type": 1
+                        },
+                        "type": "literal"
+                      }
+                    },
+                    "name": "outDocLink"
+                  }
+                ],
+                "inputParameters": [
+                  {
+                    "name": "api_token",
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "100001",
+                          "name": "api_token"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "note_url",
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "100001",
+                          "name": "user_url"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "lastCursor",
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "161823",
+                          "name": "var_lastCursor"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    }
+                  }
+                ],
+                "settingOnError": {
+                  "processType": 1,
+                  "timeoutMs": 180000,
+                  "retryTimes": 0
+                }
+              },
+              "outputs": [
+                {
+                  "type": "string",
+                  "name": "last_cursor",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "message",
+                  "required": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "success",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "tip_url",
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "data",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "integer",
+                        "name": "likes",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "nice_count",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "sticky",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "view_count",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "widgets_context",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "create_time",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "is_goods_note",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "id",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "inlikes",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "niced",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "recommend",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "desc",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "icon",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "target_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "target_name",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "track_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "type",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "ats",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "comments_count",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "has_music",
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "images_list",
+                        "schema": {
+                          "type": "object",
+                          "schema": [
+                            {
+                              "type": "string",
+                              "name": "url_size_large",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "width",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "fileid",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "height",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "original",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "trace_id",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "url",
+                              "required": false
+                            }
+                          ]
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "last_update_time",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "share_count",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "collected_count",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "desc",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "infavs",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "level",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "price",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "type",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "user",
+                        "schema": [
+                          {
+                            "type": "boolean",
+                            "name": "followed",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "fstatus",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "images",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "nickname",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "red_official_verify_type",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "userid",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "cursor",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "display_title",
+                        "required": false
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_more",
+                  "required": false
+                }
+              ]
+            },
+            "_temp": {
+              "bounds": {
+                "x": -50.09891827850964,
+                "y": 250.054490952043,
+                "width": 360,
+                "height": 113.9
+              },
+              "externalData": {
+                "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1744508409113076090_XTquTuqsgq.png?lk3s=cd508e2b&x-expires=1750402074&x-signature=yelMsGOh95PIG0aHEkOqkXopOs0%3D",
+                "apiName": "get_user_note",
+                "pluginID": "7492627931890597925",
+                "pluginProductStatus": 1,
+                "pluginProductUnlistType": 0,
+                "pluginType": 1,
+                "spaceID": "7391771569926127635",
+                "inputs": [
+                  {
+                    "description": "提取地址：https://www.51aigc.cc/#/userInfo",
+                    "input": {},
+                    "name": "api_token",
+                    "required": true,
+                    "type": "string"
+                  },
+                  {
+                    "description": "默认不填写，上一个分页的id",
+                    "input": {},
+                    "name": "lastCursor",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "description": "主页链接",
+                    "input": {},
+                    "name": "note_url",
+                    "required": true,
+                    "type": "string"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "input": {},
+                    "name": "data",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "widgets_context",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "ats",
+                          "required": false,
+                          "schema": {
+                            "assistType": 0,
+                            "type": "string"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "collected_count",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "niced",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "view_count",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "nice_count",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "user",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "userid",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "followed",
+                              "required": false,
+                              "type": "boolean"
+                            },
+                            {
+                              "input": {},
+                              "name": "fstatus",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "images",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "nickname",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "red_official_verify_type",
+                              "required": false,
+                              "type": "integer"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "create_time",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "cursor",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "desc",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "inlikes",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "is_goods_note",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "price",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "sticky",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "comments_count",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "has_music",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "images_list",
+                          "required": false,
+                          "schema": {
+                            "schema": [
+                              {
+                                "input": {},
+                                "name": "trace_id",
+                                "required": false,
+                                "type": "string"
+                              },
+                              {
+                                "input": {},
+                                "name": "url",
+                                "required": false,
+                                "type": "string"
+                              },
+                              {
+                                "input": {},
+                                "name": "url_size_large",
+                                "required": false,
+                                "type": "string"
+                              },
+                              {
+                                "input": {},
+                                "name": "width",
+                                "required": false,
+                                "type": "integer"
+                              },
+                              {
+                                "input": {},
+                                "name": "fileid",
+                                "required": false,
+                                "type": "string"
+                              },
+                              {
+                                "input": {},
+                                "name": "height",
+                                "required": false,
+                                "type": "integer"
+                              },
+                              {
+                                "input": {},
+                                "name": "original",
+                                "required": false,
+                                "type": "string"
+                              }
+                            ],
+                            "type": "object"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "infavs",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "recommend",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "target_id",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "target_name",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "track_id",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "type",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "desc",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "icon",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "share_count",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "type",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "display_title",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "last_update_time",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "level",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "likes",
+                          "required": false,
+                          "type": "integer"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "has_more",
+                    "required": false,
+                    "type": "boolean"
+                  },
+                  {
+                    "input": {},
+                    "name": "last_cursor",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "message",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "success",
+                    "required": false,
+                    "type": "boolean"
+                  },
+                  {
+                    "input": {},
+                    "name": "tip_url",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "updateTime": 1747744827,
+                "latestVersionTs": "0",
+                "latestVersionName": "",
+                "versionName": "",
+                "description": "获取用户笔记",
+                "title": "get_user_note",
+                "mainColor": "#CA61FF"
+              }
+            }
+          },
+          {
+            "id": "131755",
+            "type": "20",
+            "meta": {
+              "position": {
+                "x": 416,
+                "y": 100
+              }
+            },
+            "data": {
+              "inputs": {
+                "inputParameters": [
+                  {
+                    "left": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "161823",
+                          "name": "var_lastCursor"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    },
+                    "right": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "195033",
+                          "name": "last_cursor"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "nodeMeta": {
+                "description": "用于重置循环变量的值，使其下次循环使用重置后的值",
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LoopSetVariable-v2.jpg",
+                "mainColor": "#00B2B2",
+                "subTitle": "设置变量",
+                "title": "设置变量"
+              }
+            },
+            "_temp": {
+              "bounds": {
+                "x": 365.9010817214903,
+                "y": 250.054490952043,
+                "width": 360,
+                "height": 87.9
+              },
+              "externalData": {
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LoopSetVariable-v2.jpg",
+                "description": "用于重置循环变量的值，使其下次循环使用重置后的值",
+                "title": "设置变量",
+                "mainColor": "#00B2B2"
+              }
+            }
+          },
+          {
+            "id": "118571",
+            "type": "8",
+            "meta": {
+              "position": {
+                "x": 811,
+                "y": 103.34294345868715
+              }
+            },
+            "data": {
+              "nodeMeta": {
+                "description": "连接多个下游分支，若设定的条件成立则仅运行对应的分支，若均不成立则只运行“否则”分支",
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Condition-v2.jpg",
+                "mainColor": "#00B2B2",
+                "subTitle": "选择器",
+                "title": "选择器"
+              },
+              "inputs": {
+                "branches": [
+                  {
+                    "condition": {
+                      "logic": 2,
+                      "conditions": [
+                        {
+                          "operator": 1,
+                          "left": {
+                            "input": {
+                              "type": "boolean",
+                              "value": {
+                                "type": "ref",
+                                "content": {
+                                  "source": "block-output",
+                                  "blockID": "195033",
+                                  "name": "has_more"
+                                }
+                              }
+                            }
+                          },
+                          "right": {
+                            "input": {
+                              "type": "boolean",
+                              "value": {
+                                "type": "literal",
+                                "content": true,
+                                "rawMeta": {
+                                  "type": 3
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "_temp": {
+              "bounds": {
+                "x": 760.9010817214903,
+                "y": 253.39743441073017,
+                "width": 360,
+                "height": 139.9
+              },
+              "externalData": {
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Condition-v2.jpg",
+                "description": "连接多个下游分支，若设定的条件成立则仅运行对应的分支，若均不成立则只运行“否则”分支",
+                "title": "选择器",
+                "mainColor": "#00B2B2"
+              }
+            }
+          },
+          {
+            "id": "183011",
+            "type": "19",
+            "meta": {
+              "position": {
+                "x": 1238.994334514906,
+                "y": 254.74936606403193
+              }
+            },
+            "data": {
+              "nodeMeta": {
+                "description": "用于立即终止当前所在的循环，跳出循环体",
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Break-v2.jpg",
+                "mainColor": "#00B2B2",
+                "subTitle": "终止循环",
+                "title": "终止循环"
+              }
+            },
+            "_temp": {
+              "bounds": {
+                "x": 1188.8954162363964,
+                "y": 404.80385701607497,
+                "width": 360,
+                "height": 67.9
+              },
+              "externalData": {
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Break-v2.jpg",
+                "description": "用于立即终止当前所在的循环，跳出循环体",
+                "title": "终止循环",
+                "mainColor": "#00B2B2"
+              }
+            }
+          }
+        ],
+        "edges": [
+          {
+            "sourceNodeID": "161823",
+            "targetNodeID": "195033",
+            "sourcePortID": "loop-function-inline-output"
+          },
+          {
+            "sourceNodeID": "195033",
+            "targetNodeID": "131755"
+          },
+          {
+            "sourceNodeID": "131755",
+            "targetNodeID": "118571"
+          },
+          {
+            "sourceNodeID": "118571",
+            "targetNodeID": "161823",
+            "sourcePortID": "true",
+            "targetPortID": "loop-function-inline-input"
+          },
+          {
+            "sourceNodeID": "118571",
+            "targetNodeID": "183011",
+            "sourcePortID": "false"
+          }
+        ],
+        "_temp": {
+          "bounds": {
+            "x": 534.980833254511,
+            "y": -268.7270490261559,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Loop-v2.jpg",
+            "description": "用于通过设定循环次数和逻辑，重复执行一系列任务",
+            "title": "循环",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "114013",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 518.3975640145093,
+            "y": 572.5815598498555
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"真正使用的时候，这里需要把返回的内容保存下来\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 398.39756401450927,
+            "y": 572.5815598498555,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": -221.06157188556253,
+    "y": -268.7270490261559,
+    "width": 1116.0424051400735,
+    "height": 991.3086088760114
+  }
+}

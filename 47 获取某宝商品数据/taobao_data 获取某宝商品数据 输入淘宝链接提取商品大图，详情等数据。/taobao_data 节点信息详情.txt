@@ -1,0 +1,1183 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7491835648196231177",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "117820",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 500,
+            "y": -61.849999999999994
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "淘宝商品数据",
+            "icon": "https://p3-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/55b7d1d3a359481e9e24dd8e47ecb8bb~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1746921039&x-signature=z6mNtKPVMCXO6c%2BLVdeQtMbKmoE%3D",
+            "subtitle": "淘宝商品数据:shop_info",
+            "title": "shop_info"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7488701434796458018",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "shop_info",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7488701434796441634",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "淘宝商品数据",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "taobao_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "object",
+                  "name": "item",
+                  "schema": [
+                    {
+                      "type": "integer",
+                      "name": "suggestive_price",
+                      "required": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "tmall",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_sold",
+                      "required": false
+                    },
+                    {
+                      "type": "object",
+                      "name": "video",
+                      "schema": [],
+                      "required": false
+                    },
+                    {
+                      "type": "list",
+                      "name": "props",
+                      "schema": {
+                        "type": "object",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "name",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "value",
+                            "required": false
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "min_num",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "_ddf",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "delist_time",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "ems_fee",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "is_promotion",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "sample_id",
+                      "required": false
+                    },
+                    {
+                      "type": "list",
+                      "name": "url_log",
+                      "schema": {
+                        "type": "string"
+                      },
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "item_weight",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "nick",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "num",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "brandId",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "freight",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "post_fee",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "property_alias",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "props_name",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "item_size",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "sales",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "seller_id",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "title",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "warning",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "rootCatId",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "fav_count",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "pic_url",
+                      "required": false
+                    },
+                    {
+                      "type": "object",
+                      "name": "prop_imgs",
+                      "schema": [
+                        {
+                          "type": "list",
+                          "name": "prop_img",
+                          "schema": {
+                            "type": "object",
+                            "schema": [
+                              {
+                                "type": "string",
+                                "name": "properties",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "url",
+                                "required": false
+                              }
+                            ]
+                          },
+                          "required": false
+                        }
+                      ],
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "created_time",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "cid",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "desc",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "detail_url",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "express_fee",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "fans_count",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "num_iid",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "shipping_to",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "location",
+                      "required": false
+                    },
+                    {
+                      "type": "list",
+                      "name": "crumbs",
+                      "schema": {
+                        "type": "string"
+                      },
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "desc_short",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "error",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "has_discount",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "is_virtual",
+                      "required": false
+                    },
+                    {
+                      "type": "object",
+                      "name": "seller_info",
+                      "schema": [
+                        {
+                          "type": "string",
+                          "name": "nick",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "shop_name",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "sid",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "title",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "zhuy",
+                          "required": false
+                        }
+                      ],
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "shop_id",
+                      "required": false
+                    },
+                    {
+                      "type": "list",
+                      "name": "item_imgs",
+                      "schema": {
+                        "type": "object",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "url",
+                            "required": false
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    {
+                      "type": "list",
+                      "name": "desc_img",
+                      "schema": {
+                        "type": "string"
+                      },
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "modified_time",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "orginal_price",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "price",
+                      "required": false
+                    },
+                    {
+                      "type": "object",
+                      "name": "skus",
+                      "schema": [
+                        {
+                          "type": "list",
+                          "name": "sku",
+                          "schema": {
+                            "type": "object",
+                            "schema": [
+                              {
+                                "type": "string",
+                                "name": "quantity",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "sku_id",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "total_price",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "orginal_price",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "price",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "properties",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "properties_name",
+                                "required": false
+                              }
+                            ]
+                          },
+                          "required": false
+                        }
+                      ],
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_price",
+                      "required": false
+                    },
+                    {
+                      "type": "string",
+                      "name": "brand",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "extracted_id",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "success",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 320,
+            "y": -61.849999999999994,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1743599013253244484_iBUioNtn9P.png?lk3s=cd508e2b&x-expires=1750402510&x-signature=X%2BPV0eSJLJ21MtEkcKQdiCQOohw%3D",
+            "apiName": "shop_info",
+            "pluginID": "7488701434796441634",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "获取：https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "商品链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "item",
+                    "required": false,
+                    "schema": [
+                      {
+                        "input": {},
+                        "name": "tmall",
+                        "required": false,
+                        "type": "boolean"
+                      },
+                      {
+                        "input": {},
+                        "name": "desc_short",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "has_discount",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "nick",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "seller_id",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "title",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "_ddf",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "ems_fee",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "property_alias",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "rootCatId",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "props_name",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "sales",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_sold",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "desc",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "express_fee",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "freight",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "item_imgs",
+                        "required": false,
+                        "schema": {
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "url",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        "type": "list"
+                      },
+                      {
+                        "input": {},
+                        "name": "modified_time",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_price",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "fans_count",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "pic_url",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "prop_imgs",
+                        "required": false,
+                        "schema": [
+                          {
+                            "input": {},
+                            "name": "prop_img",
+                            "required": false,
+                            "schema": {
+                              "schema": [
+                                {
+                                  "input": {},
+                                  "name": "properties",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "url",
+                                  "required": false,
+                                  "type": "string"
+                                }
+                              ],
+                              "type": "object"
+                            },
+                            "type": "list"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "input": {},
+                        "name": "shipping_to",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "shop_id",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "item_size",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "url_log",
+                        "required": false,
+                        "schema": {
+                          "assistType": 0,
+                          "type": "string"
+                        },
+                        "type": "list"
+                      },
+                      {
+                        "input": {},
+                        "name": "video",
+                        "required": false,
+                        "schema": null,
+                        "type": "object"
+                      },
+                      {
+                        "input": {},
+                        "name": "brandId",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "crumbs",
+                        "required": false,
+                        "schema": {
+                          "assistType": 0,
+                          "type": "string"
+                        },
+                        "type": "list"
+                      },
+                      {
+                        "input": {},
+                        "name": "desc_img",
+                        "required": false,
+                        "schema": {
+                          "assistType": 0,
+                          "type": "string"
+                        },
+                        "type": "list"
+                      },
+                      {
+                        "input": {},
+                        "name": "detail_url",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "error",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "fav_count",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "location",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "min_num",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "sample_id",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "warning",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "is_virtual",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "item_weight",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "num",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "brand",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "cid",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "created_time",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "delist_time",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "is_promotion",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "seller_info",
+                        "required": false,
+                        "schema": [
+                          {
+                            "input": {},
+                            "name": "sid",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "title",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "zhuy",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "nick",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "shop_name",
+                            "required": false,
+                            "type": "string"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "input": {},
+                        "name": "skus",
+                        "required": false,
+                        "schema": [
+                          {
+                            "input": {},
+                            "name": "sku",
+                            "required": false,
+                            "schema": {
+                              "schema": [
+                                {
+                                  "input": {},
+                                  "name": "total_price",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "orginal_price",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "price",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "properties",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "properties_name",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "quantity",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "sku_id",
+                                  "required": false,
+                                  "type": "string"
+                                }
+                              ],
+                              "type": "object"
+                            },
+                            "type": "list"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "input": {},
+                        "name": "suggestive_price",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "num_iid",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "orginal_price",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "post_fee",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "price",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "props",
+                        "required": false,
+                        "schema": {
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "name",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "value",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        "type": "list"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "extracted_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "success",
+                "required": false,
+                "type": "boolean"
+              }
+            ],
+            "updateTime": 1747733915,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "输入商品链接，返回商品数据。",
+            "title": "shop_info",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "110710",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 440,
+            "y": 102.5
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"付费接口，需要填写token\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"一次扣费2毛\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 320,
+            "y": 102.5,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": 320,
+    "y": -61.849999999999994,
+    "width": 360,
+    "height": 314.35
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7447785720946851891",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "136693",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 865.8649464824067,
+            "y": -54.448027745598196
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "输入音频和内容直接克隆",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Api.png",
+            "title": "voice_clone"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7411881408039485440",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "apiID",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "voice_clone",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "apiName",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7411881408039469056",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "pluginID",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "声音克隆",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "pluginName",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "pluginVersion",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "tips",
+                "right": {}
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "dependencies": {
+                      "variables": null
+                    },
+                    "inputMode": "",
+                    "type": "literal"
+                  }
+                },
+                "left": {},
+                "name": "outDocLink",
+                "right": {}
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "speaker",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "mp3_url"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "text",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "text"
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "audio_url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 685.8649464824067,
+            "y": -54.448027745598196,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/2399581054187248_1725712963813336152_xfJTxUvisG.jpeg?lk3s=cd508e2b&x-expires=1750402696&x-signature=YI1OFQuHGba9jeKhh%2FZmLjcXkOg%3D",
+            "apiName": "voice_clone",
+            "pluginID": "7411881408039469056",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "参考的音频，5-20秒高清音频",
+                "input": {},
+                "name": "speaker",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "需要的配音内容",
+                "input": {},
+                "name": "text",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "提取api_token： https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "en，zh，音频语言",
+                "input": {},
+                "name": "language",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "audio_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747745798,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "输入音频和内容直接克隆",
+            "title": "voice_clone",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": 685.8649464824067,
+    "y": -54.448027745598196,
+    "width": 359.9999999999999,
+    "height": 113.9
+  }
+}

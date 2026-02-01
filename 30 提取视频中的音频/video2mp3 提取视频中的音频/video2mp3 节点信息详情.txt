@@ -1,0 +1,1355 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7493874407904247808",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "184895",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 640,
+            "y": -0.04999999999999716
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "搜索视频库",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "剪辑视频素材库:search",
+            "title": "search"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7482378504403927055",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "search",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7482378504403910671",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "剪辑视频素材库",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "query",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "背影",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "datas",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "list",
+                    "name": "video_url",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "required": false
+                  },
+                  {
+                    "type": "object",
+                    "name": "common_attr",
+                    "schema": [
+                      {
+                        "type": "object",
+                        "name": "cover_url",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "small",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "static_img",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "effect_id",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "extra",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "source",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "effect_type",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "id",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "status",
+                        "required": false
+                      },
+                      {
+                        "type": "float",
+                        "name": "aspect_ratio",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "is_business",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "is_original",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "md5",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "review_info",
+                        "schema": [
+                          {
+                            "type": "list",
+                            "name": "review_code_list",
+                            "schema": {
+                              "type": "string"
+                            },
+                            "required": false
+                          },
+                          {
+                            "type": "list",
+                            "name": "review_reason_list",
+                            "schema": {
+                              "type": "string"
+                            },
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "review_status",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "business_info",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "json_str",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "sign",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "create_time",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "description",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "download_info",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "format",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "url",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "has_favorited",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "publish_source",
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  },
+                  {
+                    "type": "list",
+                    "name": "timeline",
+                    "schema": {
+                      "type": "object",
+                      "schema": [
+                        {
+                          "type": "integer",
+                          "name": "end",
+                          "required": false
+                        },
+                        {
+                          "type": "integer",
+                          "name": "start",
+                          "required": false
+                        }
+                      ]
+                    },
+                    "required": false
+                  },
+                  {
+                    "type": "object",
+                    "name": "video",
+                    "schema": [
+                      {
+                        "type": "integer",
+                        "name": "duration",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "duration_ms",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "origin_video",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "definition",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "format",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "height",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "size",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "video_url",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "width",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "transcoded_video",
+                        "schema": [
+                          {
+                            "type": "object",
+                            "name": "360p",
+                            "schema": [
+                              {
+                                "type": "integer",
+                                "name": "height",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "size",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "video_url",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "width",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "definition",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "format",
+                                "required": false
+                              }
+                            ],
+                            "required": false
+                          },
+                          {
+                            "type": "object",
+                            "name": "480p",
+                            "schema": [
+                              {
+                                "type": "string",
+                                "name": "definition",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "format",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "height",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "size",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "video_url",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "width",
+                                "required": false
+                              }
+                            ],
+                            "required": false
+                          },
+                          {
+                            "type": "object",
+                            "name": "720p",
+                            "schema": [
+                              {
+                                "type": "string",
+                                "name": "definition",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "format",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "height",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "size",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "video_url",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "width",
+                                "required": false
+                              }
+                            ],
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "video_id",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "video_size_type",
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  }
+                ]
+              },
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": -0.04999999999999716,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1742125989672814641_JCTXbB6VWx.webp?lk3s=cd508e2b&x-expires=1750401152&x-signature=p5O51ZmHZFWff0vw4XaPWKOwODQ%3D",
+            "apiName": "search",
+            "pluginID": "7482378504403910671",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "横屏，默认横屏",
+                "input": {},
+                "name": "horizontal",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "description": "关键词",
+                "input": {},
+                "name": "query",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "datas",
+                "required": false,
+                "schema": {
+                  "schema": [
+                    {
+                      "input": {},
+                      "name": "video",
+                      "required": false,
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "video_size_type",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "duration",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "duration_ms",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "origin_video",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "definition",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "format",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "height",
+                              "required": false,
+                              "type": "integer"
+                            },
+                            {
+                              "input": {},
+                              "name": "size",
+                              "required": false,
+                              "type": "integer"
+                            },
+                            {
+                              "input": {},
+                              "name": "video_url",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "width",
+                              "required": false,
+                              "type": "integer"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "transcoded_video",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "360p",
+                              "required": false,
+                              "schema": [
+                                {
+                                  "input": {},
+                                  "name": "format",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "height",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "size",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "video_url",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "width",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "definition",
+                                  "required": false,
+                                  "type": "string"
+                                }
+                              ],
+                              "type": "object"
+                            },
+                            {
+                              "input": {},
+                              "name": "480p",
+                              "required": false,
+                              "schema": [
+                                {
+                                  "input": {},
+                                  "name": "definition",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "format",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "height",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "size",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "video_url",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "width",
+                                  "required": false,
+                                  "type": "integer"
+                                }
+                              ],
+                              "type": "object"
+                            },
+                            {
+                              "input": {},
+                              "name": "720p",
+                              "required": false,
+                              "schema": [
+                                {
+                                  "input": {},
+                                  "name": "definition",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "format",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "height",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "size",
+                                  "required": false,
+                                  "type": "integer"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "video_url",
+                                  "required": false,
+                                  "type": "string"
+                                },
+                                {
+                                  "input": {},
+                                  "name": "width",
+                                  "required": false,
+                                  "type": "integer"
+                                }
+                              ],
+                              "type": "object"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "video_id",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "input": {},
+                      "name": "video_url",
+                      "required": false,
+                      "schema": {
+                        "assistType": 0,
+                        "type": "string"
+                      },
+                      "type": "list"
+                    },
+                    {
+                      "input": {},
+                      "name": "common_attr",
+                      "required": false,
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "is_business",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "publish_source",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "status",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "effect_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "has_favorited",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "create_time",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "effect_type",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "review_info",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "review_code_list",
+                              "required": false,
+                              "schema": {
+                                "assistType": 0,
+                                "type": "string"
+                              },
+                              "type": "list"
+                            },
+                            {
+                              "input": {},
+                              "name": "review_reason_list",
+                              "required": false,
+                              "schema": {
+                                "assistType": 0,
+                                "type": "string"
+                              },
+                              "type": "list"
+                            },
+                            {
+                              "input": {},
+                              "name": "review_status",
+                              "required": false,
+                              "type": "integer"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "md5",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "source",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "cover_url",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "small",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "static_img",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "description",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "download_info",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "format",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "url",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "extra",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "is_original",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "aspect_ratio",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "input": {},
+                          "name": "business_info",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "json_str",
+                              "required": false,
+                              "type": "string"
+                            },
+                            {
+                              "input": {},
+                              "name": "sign",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "input": {},
+                      "name": "timeline",
+                      "required": false,
+                      "schema": {
+                        "schema": [
+                          {
+                            "input": {},
+                            "name": "end",
+                            "required": false,
+                            "type": "integer"
+                          },
+                          {
+                            "input": {},
+                            "name": "start",
+                            "required": false,
+                            "type": "integer"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "type": "list"
+                    }
+                  ],
+                  "type": "object"
+                },
+                "type": "list"
+              }
+            ],
+            "updateTime": 1747806370,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "搜索视频库",
+            "title": "search",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "134243",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1100,
+            "y": -0.04999999999999716
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "从视频提取音频",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "视频工具:audio_extractor",
+            "title": "audio_extractor"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7493396054575104011",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "audio_extractor",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238506020",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频工具",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "184895",
+                      "name": "datas.common_attr.download_info.url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false,
+              "description": "错误消息"
+            },
+            {
+              "type": "float",
+              "name": "code",
+              "required": false,
+              "description": "错误码"
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "url",
+                  "required": false,
+                  "description": "音频文件对应的 URL"
+                }
+              ],
+              "required": false,
+              "description": "返回数据"
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false,
+              "description": "日志 id"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 920,
+            "y": -0.04999999999999716,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/7064468330176_1744184218169052068_XydqppUnuQ.png?lk3s=cd508e2b&x-expires=1750401152&x-signature=MWBuTywM3qTdWFcMQYHYRIQkWo8%3D",
+            "apiName": "audio_extractor",
+            "pluginID": "7491322136238506020",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "defaultValue": "mp3",
+                "description": "音频类型, 默认 mp3, 支持 mp3, wav, aac, default value is mp3",
+                "input": {},
+                "name": "audio_type",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "视频 url",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "返回数据",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "音频文件对应的 URL",
+                    "input": {},
+                    "name": "url",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志 id",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误消息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747809077,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "从视频提取音频",
+            "title": "audio_extractor",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "195579",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 580,
+            "y": 191.95000000000005
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"搜索视频\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": 191.95000000000005,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "152692",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1047.5,
+            "y": 199.45000000000005
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"提取音频\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 927.5,
+            "y": 199.45000000000005,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "184895",
+        "targetNodeID": "134243"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 460,
+    "y": -0.04999999999999716,
+    "width": 820,
+    "height": 349.50000000000006
+  }
+}

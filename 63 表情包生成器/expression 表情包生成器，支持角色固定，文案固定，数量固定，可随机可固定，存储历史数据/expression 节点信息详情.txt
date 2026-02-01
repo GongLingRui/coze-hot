@@ -1,0 +1,529 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7490538896951394330",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "142334",
+        "type": "3",
+        "meta": {
+          "position": {
+            "x": -428,
+            "y": -158.95001220703125
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "subTitle": "大模型",
+            "title": "大模型"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "role",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "role"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "num",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "num"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "talk",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "task"
+                    }
+                  }
+                }
+              }
+            ],
+            "llmParam": [
+              {
+                "name": "temperature",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": "1",
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "topP",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": "0.7",
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "responseFormat",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "2",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "maxTokens",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "1024",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modleName",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "豆包·Function call模型",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modelType",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "1706077826",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "generationDiversity",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "balance",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "enableChatHistory",
+                "input": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "literal",
+                    "content": false,
+                    "rawMeta": {
+                      "type": 3
+                    }
+                  }
+                }
+              },
+              {
+                "name": "chatHistoryRound",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "3",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "systemPrompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "你是一名专业的表情包提示词生成家，你需要帮我生成适合AI绘画的提示词，提示词内容专门描述表情包的场景，你需要给我表情描述和动作，规则如下：\n1、如果{{role}}等于“随机”那角色帮我自由发挥，但是一定不要出现“随机”这两个字，如果{{role}}不等于“随机”，那么角色一定是{{role}}，表情和动作尽可能相呼应\n2、如果{{talk}}等于“随机”那配文内容也帮我自由发挥，但是一定不要出现“随机”这两个字，如果{{talk}}不等于“随机”，那配文内容也一定是{{talk}},表情和动作尽可能相呼应\n2、格式一定是漫画表情包+{{role}}+表情+动作+配文：“{{talk}}”\n3、请严格按照我的要求输出，帮我直接输出{{num}}描述词，一定要出{{num}}描述词，不要出现数字等不必要的文案介绍和话术\n\n请严格按照以上的要求出提示词\n\n案例输出：\n画一个表情包，皮卡丘，凶恶的表情，拿着20米的长刀，配文：“你想咋地？”\n画一个表情包，蜡笔小新，生气的表情，生气的动作，配文：“想打你”\n画一个表情包，熊猫，兴奋的表情，关电脑的动作，配文：“下班啦”\n",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 600000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "output",
+              "required": false
+            }
+          ],
+          "version": "3"
+        },
+        "_temp": {
+          "bounds": {
+            "x": -608,
+            "y": -158.95001220703125,
+            "width": 360,
+            "height": 165.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "title": "大模型",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "105312",
+        "type": "5",
+        "meta": {
+          "position": {
+            "x": 32,
+            "y": -132.95001220703125
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "编写代码，处理输入变量来生成返回值",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "subTitle": "代码",
+            "title": "格式化描述词"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "infos",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "142334",
+                      "name": "output"
+                    }
+                  }
+                }
+              }
+            ],
+            "code": "async function main({ params }: Args): Promise<Output> {\n    let infos = params.infos.split('\\n').filter(info => info.trim() !== '')\n    let ret = []\n    for (let info of  infos){\n        ret.push(`${info}，突出的主体，高光，强光，8K，高画质，高分辨率`)\n    }\n\n    \n\n    return ret;\n}",
+            "language": 5,
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 60000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "ret",
+              "schema": {
+                "type": "string"
+              },
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": -148,
+            "y": -132.95001220703125,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "description": "编写代码，处理输入变量来生成返回值",
+            "title": "代码",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "155118",
+        "type": "21",
+        "meta": {
+          "position": {
+            "x": 451,
+            "y": -132.95001220703125
+          },
+          "canvasPosition": {
+            "x": 451,
+            "y": 67.04998779296875
+          }
+        },
+        "data": {
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "list",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "105312",
+                      "name": "ret"
+                    },
+                    "rawMeta": {
+                      "type": 99
+                    }
+                  }
+                }
+              }
+            ],
+            "loopCount": {
+              "type": "integer",
+              "value": {
+                "type": "literal",
+                "content": "10"
+              }
+            },
+            "loopType": "array",
+            "variableParameters": []
+          },
+          "nodeMeta": {
+            "description": "用于通过设定循环次数和逻辑，重复执行一系列任务",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Loop-v2.jpg",
+            "mainColor": "#00B2B2",
+            "subTitle": "循环",
+            "title": "循环"
+          },
+          "outputs": [
+            {
+              "name": "output",
+              "input": {
+                "type": "list",
+                "assistType": 2,
+                "schema": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "ref",
+                  "content": {
+                    "source": "block-output",
+                    "blockID": "190661",
+                    "name": "data"
+                  },
+                  "rawMeta": {
+                    "type": 7
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "blocks": [
+          {
+            "id": "190661",
+            "type": "16",
+            "meta": {
+              "position": {
+                "x": 0,
+                "y": 100
+              }
+            },
+            "data": {
+              "inputs": {
+                "apiParam": null,
+                "inputParameters": [
+                  {
+                    "name": "prompt",
+                    "input": {
+                      "type": "string",
+                      "value": {
+                        "type": "ref",
+                        "content": {
+                          "source": "block-output",
+                          "blockID": "155118",
+                          "name": "input"
+                        },
+                        "rawMeta": {
+                          "type": 1
+                        }
+                      }
+                    }
+                  }
+                ],
+                "modelSetting": {
+                  "custom_ratio": {
+                    "height": 1024,
+                    "width": 1024
+                  },
+                  "ddim_steps": 25,
+                  "images_reference": {},
+                  "model": 8,
+                  "ratio": 0
+                },
+                "prompt": {
+                  "negative_prompt": "",
+                  "prompt": "{{prompt}}"
+                },
+                "references": [],
+                "settingOnError": {
+                  "processType": 1,
+                  "timeoutMs": 60000,
+                  "retryTimes": 0
+                }
+              },
+              "nodeMeta": {
+                "description": "通过文字描述/添加参考图生成图片",
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-ImageGeneration-v2.jpg",
+                "subTitle": "图像生成",
+                "title": "图像生成_1"
+              },
+              "outputs": [
+                {
+                  "type": "string",
+                  "assistType": 2,
+                  "name": "data",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "msg",
+                  "required": false
+                }
+              ]
+            },
+            "_temp": {
+              "bounds": {
+                "x": 271,
+                "y": 167.04998779296875,
+                "width": 360,
+                "height": 165.9
+              },
+              "externalData": {
+                "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-ImageGeneration-v2.jpg",
+                "description": "通过文字描述/添加参考图生成图片",
+                "title": "图像生成",
+                "mainColor": "#FF4DC3"
+              }
+            }
+          }
+        ],
+        "edges": [
+          {
+            "sourceNodeID": "155118",
+            "targetNodeID": "190661",
+            "sourcePortID": "loop-function-inline-output"
+          },
+          {
+            "sourceNodeID": "190661",
+            "targetNodeID": "155118",
+            "targetPortID": "loop-function-inline-input"
+          }
+        ],
+        "_temp": {
+          "bounds": {
+            "x": 271,
+            "y": -132.95001220703125,
+            "width": 360,
+            "height": 139.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Loop-v2.jpg",
+            "description": "用于通过设定循环次数和逻辑，重复执行一系列任务",
+            "title": "循环",
+            "mainColor": "#00B2B2"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "142334",
+        "targetNodeID": "105312"
+      },
+      {
+        "sourceNodeID": "105312",
+        "targetNodeID": "155118"
+      }
+    ]
+  },
+  "bounds": {
+    "x": -608,
+    "y": -158.95001220703125,
+    "width": 1239,
+    "height": 165.9
+  }
+}

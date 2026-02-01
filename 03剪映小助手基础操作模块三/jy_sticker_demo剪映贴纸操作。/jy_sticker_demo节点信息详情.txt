@@ -1,0 +1,1468 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7490467137262878783",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "122533",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 935.2111560562907,
+            "y": 60.09815763831148
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "查找贴纸",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "剪映小助手数据生成器:search_sticker",
+            "title": "search_sticker"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7479425230604107828",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "search_sticker",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7475829177439109155",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "剪映小助手数据生成器",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "关键词",
+                "input": {},
+                "name": "keyword",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "keyword",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "list",
+              "name": "data",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "object",
+                    "name": "sticker",
+                    "schema": [
+                      {
+                        "type": "integer",
+                        "name": "sticker_type",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "track_thumbnail",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "large_image",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "image_url",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "preview_cover",
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "sticker_package",
+                        "schema": [
+                          {
+                            "type": "integer",
+                            "name": "width_per_frame",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "height_per_frame",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "size",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "sticker_id",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "title",
+                    "required": false
+                  }
+                ]
+              },
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 755.2111560562907,
+            "y": 60.09815763831148,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1740601667083827169_qvIu8uOxyr.jpeg?lk3s=cd508e2b&x-expires=1750404765&x-signature=vtkIu%2F9igc0SviV8NPpwrM8UITo%3D",
+            "apiName": "search_sticker",
+            "pluginID": "7475829177439109155",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "关键词",
+                "input": {},
+                "name": "keyword",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": {
+                  "schema": [
+                    {
+                      "input": {},
+                      "name": "sticker",
+                      "required": false,
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "preview_cover",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "sticker_package",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "height_per_frame",
+                              "required": false,
+                              "type": "integer"
+                            },
+                            {
+                              "input": {},
+                              "name": "size",
+                              "required": false,
+                              "type": "integer"
+                            },
+                            {
+                              "input": {},
+                              "name": "width_per_frame",
+                              "required": false,
+                              "type": "integer"
+                            }
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "input": {},
+                          "name": "sticker_type",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "track_thumbnail",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "large_image",
+                          "required": false,
+                          "schema": [
+                            {
+                              "input": {},
+                              "name": "image_url",
+                              "required": false,
+                              "type": "string"
+                            }
+                          ],
+                          "type": "object"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "input": {},
+                      "name": "sticker_id",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "title",
+                      "required": false,
+                      "type": "string"
+                    }
+                  ],
+                  "type": "object"
+                },
+                "type": "list"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747812640,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "查找贴纸",
+            "title": "search_sticker",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "156498",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 935.2111560562907,
+            "y": 268.99815763831145
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"查找贴纸\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 815.2111560562907,
+            "y": 268.99815763831145,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "121495",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1395.2111560562907,
+            "y": 60.09815763831148
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "插件入口-创建草稿",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "视频合成_剪映小助手:create_draft",
+            "title": "create_draft"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7457837955684515874",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "create_draft",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7457837925833801768",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频合成_剪映小助手",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "高",
+                "input": {},
+                "name": "height",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "关联创作者",
+                "input": {},
+                "name": "user_id",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "宽",
+                "input": {},
+                "name": "width",
+                "required": false,
+                "type": "integer"
+              }
+            ],
+            "inputParameters": [],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "draft_url",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "tip_url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1215.2111560562907,
+            "y": 60.09815763831148,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1739242717113014582_ZXUfNgToeJ.png?lk3s=cd508e2b&x-expires=1750404765&x-signature=e6qhTK1Gxl%2BDg5u81SDCbqoNs6U%3D",
+            "apiName": "create_draft",
+            "pluginID": "7457837925833801768",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "高",
+                "input": {},
+                "name": "height",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "关联创作者，用来获取推广分成",
+                "input": {},
+                "name": "user_id",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "宽",
+                "input": {},
+                "name": "width",
+                "required": false,
+                "type": "integer"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "draft_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "tip_url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747812485,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "插件入口-创建草稿",
+            "title": "create_draft",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "170944",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1855.2111560562907,
+            "y": 60.09815763831148
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "添加贴纸，批处理时，并发要设置成1 ",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "视频合成_剪映小助手:add_sticker",
+            "title": "add_sticker"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7479633158624018432",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "add_sticker",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7457837925833801768",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频合成_剪映小助手",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "batch": {
+              "batchEnable": true,
+              "batchSize": 100,
+              "concurrentSize": 1,
+              "inputLists": [
+                {
+                  "name": "data",
+                  "input": {
+                    "type": "list",
+                    "schema": {
+                      "type": "object",
+                      "schema": [
+                        {
+                          "type": "object",
+                          "name": "sticker",
+                          "schema": [
+                            {
+                              "type": "integer",
+                              "name": "sticker_type",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "track_thumbnail",
+                              "required": false
+                            },
+                            {
+                              "type": "object",
+                              "name": "large_image",
+                              "schema": [
+                                {
+                                  "type": "string",
+                                  "name": "image_url",
+                                  "required": false
+                                }
+                              ],
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "preview_cover",
+                              "required": false
+                            },
+                            {
+                              "type": "object",
+                              "name": "sticker_package",
+                              "schema": [
+                                {
+                                  "type": "integer",
+                                  "name": "width_per_frame",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "height_per_frame",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "size",
+                                  "required": false
+                                }
+                              ],
+                              "required": false
+                            }
+                          ],
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "sticker_id",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "title",
+                          "required": false
+                        }
+                      ]
+                    },
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "122533",
+                        "name": "data"
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "timelines",
+                  "input": {
+                    "type": "list",
+                    "schema": {
+                      "type": "object",
+                      "schema": [
+                        {
+                          "type": "integer",
+                          "name": "start",
+                          "required": false
+                        },
+                        {
+                          "type": "integer",
+                          "name": "end",
+                          "required": false
+                        }
+                      ]
+                    },
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "118655",
+                        "name": "timelines"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "inputDefs": [
+              {
+                "description": "结束时间",
+                "input": {},
+                "name": "end",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "缩放，0-5",
+                "input": {},
+                "name": "scale",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "开始时间",
+                "input": {},
+                "name": "start",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "贴纸ID，从数据生成器search_sticker里面获取",
+                "input": {},
+                "name": "sticker_id",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "剪映的x位置",
+                "input": {},
+                "name": "transform_x",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "剪映的y位置",
+                "input": {},
+                "name": "transform_y",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "草稿地址",
+                "input": {},
+                "name": "draft_url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "draft_url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "121495",
+                      "name": "draft_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "end",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "170944",
+                      "name": "timelines.end"
+                    },
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "start",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "170944",
+                      "name": "timelines.start"
+                    },
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "sticker_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "170944",
+                      "name": "data.sticker_id"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "outputList",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "string",
+                    "name": "draft_url",
+                    "required": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1675.2111560562907,
+            "y": 60.09815763831148,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1739242717113014582_ZXUfNgToeJ.png?lk3s=cd508e2b&x-expires=1750404765&x-signature=e6qhTK1Gxl%2BDg5u81SDCbqoNs6U%3D",
+            "apiName": "add_sticker",
+            "pluginID": "7457837925833801768",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "缩放，0-5",
+                "input": {},
+                "name": "scale",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "开始时间",
+                "input": {},
+                "name": "start",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "贴纸ID，从数据生成器search_sticker里面获取",
+                "input": {},
+                "name": "sticker_id",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "剪映的x位置",
+                "input": {},
+                "name": "transform_x",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "剪映的y位置",
+                "input": {},
+                "name": "transform_y",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "草稿地址",
+                "input": {},
+                "name": "draft_url",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "结束时间",
+                "input": {},
+                "name": "end",
+                "required": true,
+                "type": "integer"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "draft_url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747812485,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "添加贴纸，批处理时，并发要设置成1 ",
+            "title": "add_sticker",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "118655",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 475.21115605629075,
+            "y": 60.09815763831148
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "自定义创建时间线列表",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "剪映小助手数据生成器:timelines",
+            "title": "timelines"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7475829177439272995",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "timelines",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7475829177439109155",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "剪映小助手数据生成器",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "方式，0平均分，1 随机，默认0",
+                "input": {},
+                "name": "type",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "总长度，单位微秒，eg：10000000",
+                "input": {},
+                "name": "duration",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "时间线上的个数",
+                "input": {},
+                "name": "num",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "默认开始0，如果设置了，就从start开始",
+                "input": {},
+                "name": "start",
+                "required": false,
+                "type": "integer"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "duration",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": 10000000,
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "num",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": 2,
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "type",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": 0,
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "all_timelines",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "integer",
+                    "name": "end",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "start",
+                    "required": false
+                  }
+                ]
+              },
+              "required": false
+            },
+            {
+              "type": "list",
+              "name": "timelines",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "integer",
+                    "name": "start",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "end",
+                    "required": false
+                  }
+                ]
+              },
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 295.21115605629075,
+            "y": 60.09815763831148,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1740601667083827169_qvIu8uOxyr.jpeg?lk3s=cd508e2b&x-expires=1750404765&x-signature=MajiKgzJtmggTsZlPZH%2BjYf83z0%3D",
+            "apiName": "timelines",
+            "pluginID": "7475829177439109155",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "总长度，单位微秒，eg：10000000",
+                "input": {},
+                "name": "duration",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "时间线上的个数",
+                "input": {},
+                "name": "num",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "默认开始0，如果设置了，就从start开始",
+                "input": {},
+                "name": "start",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "方式，0平均分，1 随机，默认0",
+                "input": {},
+                "name": "type",
+                "required": false,
+                "type": "integer"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "all_timelines",
+                "required": false,
+                "schema": {
+                  "schema": [
+                    {
+                      "input": {},
+                      "name": "end",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "start",
+                      "required": false,
+                      "type": "integer"
+                    }
+                  ],
+                  "type": "object"
+                },
+                "type": "list"
+              },
+              {
+                "input": {},
+                "name": "timelines",
+                "required": false,
+                "schema": {
+                  "schema": [
+                    {
+                      "input": {},
+                      "name": "end",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "start",
+                      "required": false,
+                      "type": "integer"
+                    }
+                  ],
+                  "type": "object"
+                },
+                "type": "list"
+              }
+            ],
+            "updateTime": 1747812640,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "自定义创建时间线列表",
+            "title": "timelines",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "177170",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1855.2111560562907,
+            "y": 268.99815763831145
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"并发要设置成1\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1735.2111560562907,
+            "y": 268.99815763831145,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "118655",
+        "targetNodeID": "122533"
+      },
+      {
+        "sourceNodeID": "122533",
+        "targetNodeID": "121495"
+      },
+      {
+        "sourceNodeID": "121495",
+        "targetNodeID": "170944"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 295.21115605629075,
+    "y": 60.09815763831148,
+    "width": 1740,
+    "height": 358.9
+  }
+}

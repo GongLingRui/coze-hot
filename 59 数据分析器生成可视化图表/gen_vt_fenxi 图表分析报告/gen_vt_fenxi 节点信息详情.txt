@@ -1,0 +1,815 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7490409348423155739",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "122341",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 640,
+            "y": 26
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "读取文档内容，目前支持html、xml、doc、docx、txt、pdf、csv、xlsx格式",
+            "icon": "https://p3-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/b7145cb1c10d4ed49c883b49c2248437~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1745796168&x-signature=AJymOxVpgTgMgjiR7weKVNqQs9o%3D",
+            "subtitle": "文件读取:read",
+            "title": "read"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7405805158996934683",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "read",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7405805158996918299",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "文件读取",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "文档链接，不支持ip形式的资源链接，建议将ip形式资源链接转换为域名形式使用",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "assistType": 1,
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "file"
+                    },
+                    "rawMeta": {
+                      "type": 8
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "data",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/143398405153839_1723539857486970289_UwtnDxyU3d.jpg?lk3s=cd508e2b&x-expires=1750404672&x-signature=G8K%2Bn6%2Fj9Fiq3jyKIRYrF2rFA0s%3D",
+            "apiName": "read",
+            "pluginID": "7405805158996918299",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "文档链接，不支持ip形式的资源链接，建议将ip形式资源链接转换为域名形式使用",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747812547,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "读取文档内容，目前支持html、xml、doc、docx、txt、pdf、csv、xlsx格式",
+            "title": "read",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "145182",
+        "type": "3",
+        "meta": {
+          "position": {
+            "x": 1560,
+            "y": 0
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "subTitle": "大模型",
+            "title": "大模型"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "122341",
+                      "name": "data"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "prompt"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "llmParam": [
+              {
+                "name": "generationDiversity",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "default_val",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "temperature",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": "0.8",
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "maxTokens",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "16384",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "responseFormat",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "2",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modleName",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "DeepSeek-V3-0324",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modelType",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "1742989917",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "重点要求：{{prompt}}\n数据：\n{{input}}\n",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "enableChatHistory",
+                "input": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "literal",
+                    "content": false,
+                    "rawMeta": {
+                      "type": 3
+                    }
+                  }
+                }
+              },
+              {
+                "name": "chatHistoryRound",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "3",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "systemPrompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "你是一位专业的数据分析师和可视化专家。你的任务是将CSV数据转换为一个美观、专业的HTML分析报告。请遵循以下要求：\n\n1. 数据分析职责：\n- 对输入的CSV数据进行全面分析\n- 识别关键趋势和模式\n- 提供有意义的商业洞察\n- 生成相关统计数据\n\n2. 可视化要求：\n- 使用Chart.js库创建交互式图表\n- 为不同类型的数据选择最合适的图表类型（折线图、柱状图、饼图等）\n- 使用协调的配色方案\n- 确保图表具有清晰的标题和标签\n\n3. HTML报告格式：\n- 使用现代、响应式的设计\n- 包含醒目的标题和简洁的导航\n- 分节展示不同维度的分析\n- 使用Bootstrap样式美化页面\n\n4. 输出格式要求：\n请生成完整的HTML代码，包含：\n- 必要的CSS样式\n- Chart.js库引用\n- 数据可视化JavaScript代码\n- 分析文本和洞察\n\n5. 报告结构：\n- 执行摘要\n- 关键指标展示\n- 详细数据分析\n- 趋势分析\n- 建议和结论\n\n请确保生成的报告既专业又易于理解，适合向管理层汇报。\n\n示例输入：\n[CSV数据]\n\n期望输出：\n完整的HTML报告代码，包含数据可视化和分析洞察。",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 600000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "output",
+              "required": false
+            }
+          ],
+          "version": "3"
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1380,
+            "y": 0,
+            "width": 360,
+            "height": 165.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "title": "大模型",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "153596",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 2480,
+            "y": 26
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "上传html内容，生成外网能访问的地址。",
+            "icon": "https://p6-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/da6acc7760c342d9989d6cc37cfa5b9b~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1745796236&x-signature=UvcDNUVcrH3djXVjnO5CwvzSl%2Fc%3D",
+            "subtitle": "发布网页:html2url",
+            "title": "html2url"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486017394901581876",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "html2url",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486017394901565492",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "发布网页",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "网页内容",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "html",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "145182",
+                      "name": "output"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 2300,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1742973417767865242_cgRXxhuqo5.png?lk3s=cd508e2b&x-expires=1750404672&x-signature=jfgjpXnT4ciNLFjHX6FUTDsnHso%3D",
+            "apiName": "html2url",
+            "pluginID": "7486017394901565492",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "网页内容",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747790714,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "上传html内容，生成外网能访问的地址。",
+            "title": "html2url",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "132029",
+        "type": "13",
+        "meta": {
+          "position": {
+            "x": 1100,
+            "y": 26
+          }
+        },
+        "data": {
+          "inputs": {
+            "content": {
+              "type": "string",
+              "value": {
+                "type": "literal",
+                "content": "表格数据读取完成，报告生成需要1-3分钟，请耐心等待。"
+              }
+            },
+            "inputParameters": [
+              {
+                "name": "output",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "122341",
+                      "name": "data"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "streamingOutput": false,
+            "callTransferVoice": true,
+            "chatHistoryWriting": "historyWrite"
+          },
+          "nodeMeta": {
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "mainColor": "#5C62FF",
+            "subTitle": "输出",
+            "title": "读取表格数据"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 920,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "title": "输出",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "142912",
+        "type": "13",
+        "meta": {
+          "position": {
+            "x": 2020,
+            "y": 26
+          }
+        },
+        "data": {
+          "inputs": {
+            "content": {
+              "type": "string",
+              "value": {
+                "type": "literal",
+                "content": "报告生成完毕，正在上传。"
+              }
+            },
+            "inputParameters": [
+              {
+                "name": "output",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "145182",
+                      "name": "output"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "streamingOutput": false,
+            "callTransferVoice": true,
+            "chatHistoryWriting": "historyWrite"
+          },
+          "nodeMeta": {
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "mainColor": "#5C62FF",
+            "subTitle": "输出",
+            "title": "开始生成报表"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1840,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "title": "输出",
+            "mainColor": "#5C62FF"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "122341",
+        "targetNodeID": "132029"
+      },
+      {
+        "sourceNodeID": "132029",
+        "targetNodeID": "145182"
+      },
+      {
+        "sourceNodeID": "145182",
+        "targetNodeID": "142912"
+      },
+      {
+        "sourceNodeID": "142912",
+        "targetNodeID": "153596"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 460,
+    "y": 0,
+    "width": 2200,
+    "height": 165.9
+  }
+}

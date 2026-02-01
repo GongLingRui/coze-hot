@@ -1,0 +1,1297 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7490414065538990131",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "167723",
+        "type": "3",
+        "meta": {
+          "position": {
+            "x": 933.7653353241155,
+            "y": -207.64090934402446
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "subTitle": "大模型",
+            "title": "大模型"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "prompt"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "outputList",
+                "input": {
+                  "type": "list",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "pdf_content",
+                        "required": false,
+                        "description": "pdf的内容"
+                      },
+                      {
+                        "type": "integer",
+                        "name": "code",
+                        "required": false,
+                        "description": "错误码"
+                      },
+                      {
+                        "type": "object",
+                        "name": "data",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "content",
+                            "required": false
+                          },
+                          {
+                            "type": "list",
+                            "name": "images",
+                            "schema": {
+                              "type": "object",
+                              "schema": [
+                                {
+                                  "type": "string",
+                                  "name": "alt",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "height",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "title",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "url",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "width",
+                                  "required": false
+                                }
+                              ]
+                            },
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "title",
+                            "required": false
+                          }
+                        ],
+                        "required": false,
+                        "description": "网页的内容"
+                      },
+                      {
+                        "type": "string",
+                        "name": "err_msg",
+                        "required": false,
+                        "description": "错误信息"
+                      },
+                      {
+                        "type": "string",
+                        "name": "error_code",
+                        "required": false,
+                        "description": "错误码"
+                      },
+                      {
+                        "type": "string",
+                        "name": "error_msg",
+                        "required": false,
+                        "description": "错误信息"
+                      },
+                      {
+                        "type": "string",
+                        "name": "message",
+                        "required": false,
+                        "description": "错误信息"
+                      }
+                    ]
+                  },
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "187251",
+                      "name": "outputList"
+                    },
+                    "rawMeta": {
+                      "type": 103
+                    }
+                  }
+                }
+              }
+            ],
+            "llmParam": [
+              {
+                "name": "temperature",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": "0.8",
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "maxTokens",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "16384",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "responseFormat",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "2",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modleName",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "DeepSeek-V3",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modelType",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "1738675210",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "generationDiversity",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "default_val",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "图片信息：{{outputList}}\n用户输入：{{input}}\n根据以下信息生成一份专业的HTML简历。请直接返回完整的HTML文件内容，不要包含markdown代码块或任何其他格式：\n",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "enableChatHistory",
+                "input": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "literal",
+                    "content": false,
+                    "rawMeta": {
+                      "type": 3
+                    }
+                  }
+                }
+              },
+              {
+                "name": "chatHistoryRound",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "3",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "systemPrompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "# 角色\n你是一个专业且经验丰富的简历生成器，能够根据用户提供的个人信息，生成一个完整且美观的HTML简历。生成的简历要具备恰当的CSS样式，保证拥有出色的排版和配色。\n\n## 技能\n### 技能1: 生成简历\n1. 用户提供个人信息后，分析信息内容是否完整，若缺少关键信息，则自行补充。关键信息包括但不限于姓名、联系方式、工作经历、教育背景等。\n2. 根据用户提供的完整信息，按照行业通用且美观的布局，编写包含合适CSS样式的HTML代码来生成简历。\n3. 确保生成的HTML代码结构清晰，标签使用正确，CSS样式能够有效呈现简历内容，达到良好的视觉效果。\n4.优化一下里面的文案表达。\n\n## 限制:\n- 只返回符合要求的HTML代码，不需要任何额外解释。\n- 生成的简历需符合当前行业对于简历美观度和实用性的基本标准。",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 600000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "html",
+              "required": false,
+              "description": "html内容"
+            }
+          ],
+          "version": "3"
+        },
+        "_temp": {
+          "bounds": {
+            "x": 753.7653353241155,
+            "y": -207.64090934402446,
+            "width": 360,
+            "height": 165.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "title": "大模型",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "187221",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1853.7653353241153,
+            "y": -181.64090934402446
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "上传html内容",
+            "icon": "https://p9-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/2d83092f6dff4af48427d9f724448b5e~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1745566410&x-signature=7e%2BDLEzLsJifEupQ85ubSabPq9Q%3D",
+            "subtitle": "上传html:html2url",
+            "title": "html2url"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486017394901581876",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "html2url",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486017394901565492",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "上传html",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "网页内容",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "html",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "112767",
+                      "name": "html"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1673.7653353241153,
+            "y": -181.64090934402446,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1742973417767865242_cgRXxhuqo5.png?lk3s=cd508e2b&x-expires=1750404600&x-signature=3xVlJH8bfApNm0adL5R9FrzVwjQ%3D",
+            "apiName": "html2url",
+            "pluginID": "7486017394901565492",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "网页内容",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747790714,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "上传html内容，生成外网能访问的地址。",
+            "title": "html2url",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "112767",
+        "type": "5",
+        "meta": {
+          "position": {
+            "x": 1393.7653353241155,
+            "y": -181.64090934402446
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "编写代码，处理输入变量来生成返回值",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "subTitle": "代码",
+            "title": "代码"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "167723",
+                      "name": "html"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "code": "// 在这里，您可以通过 ‘params’  获取节点中的输入变量，并通过 'ret' 输出结果\n// 'params' 和 'ret' 已经被正确地注入到环境中\n// 下面是一个示例，获取节点输入中参数名为‘input’的值：\n// const input = params.input; \n// 下面是一个示例，输出一个包含多种数据类型的 'ret' 对象：\n// const ret = { \"name\": ‘小明’, \"hobbies\": [“看书”, “旅游”] };\n\nasync function main({ params }: Args): Promise<Output> {\n    // 构建输出对象\n    params.input = params.input.replace('```html','')\n    params.input = params.input.replace('```','')\n\n    params.input = params.input.replace('<body>',`<body>\n    <script src=\"https://coze-tmp-file.oss-cn-shenzhen.aliyuncs.com/11-05-2024/down.js\"></script>`)\n    const ret = {\n        \"html\": params.input \n        \n    };\n\n    \n    return ret;\n}",
+            "language": 5,
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 60000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "html",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1213.7653353241155,
+            "y": -181.64090934402446,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "description": "编写代码，处理输入变量来生成返回值",
+            "title": "代码",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "187251",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 473.76533532411554,
+            "y": -181.64090934402446
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "当你需要获取网页、pdf 内容时，使用此工具。可以获取url链接下的标题和内容。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "链接读取:LinkReaderPlugin",
+            "title": "LinkReaderPlugin"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7379227817307029513",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "LinkReaderPlugin",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7379227817307013129",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "链接读取",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "batch": {
+              "batchEnable": true,
+              "batchSize": 100,
+              "concurrentSize": 10,
+              "inputLists": [
+                {
+                  "name": "item1",
+                  "input": {
+                    "type": "list",
+                    "schema": {
+                      "type": "string",
+                      "assistType": 1
+                    },
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "100001",
+                        "name": "files"
+                      },
+                      "rawMeta": {
+                        "type": 105
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "inputDefs": [
+              {
+                "description": "网页url、pdf url、docx url、csv url。",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "当type为“检索”时，需要检索的query",
+                "input": {},
+                "name": "prompt",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "是否跳过缓存，取值为true或者false",
+                "input": {},
+                "name": "skip_cache",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "defaultValue": "全文",
+                "description": "插件使用方式。可以是“全文”、“检索”、“总结”, default value is 全文",
+                "input": {},
+                "name": "type",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "187251",
+                      "name": "item1"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "outputList",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "string",
+                    "name": "pdf_content",
+                    "required": false,
+                    "description": "pdf的内容"
+                  },
+                  {
+                    "type": "integer",
+                    "name": "code",
+                    "required": false,
+                    "description": "错误码"
+                  },
+                  {
+                    "type": "object",
+                    "name": "data",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "content",
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "images",
+                        "schema": {
+                          "type": "object",
+                          "schema": [
+                            {
+                              "type": "string",
+                              "name": "alt",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "height",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "title",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "url",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "width",
+                              "required": false
+                            }
+                          ]
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false
+                      }
+                    ],
+                    "required": false,
+                    "description": "网页的内容"
+                  },
+                  {
+                    "type": "string",
+                    "name": "err_msg",
+                    "required": false,
+                    "description": "错误信息"
+                  },
+                  {
+                    "type": "string",
+                    "name": "error_code",
+                    "required": false,
+                    "description": "错误码"
+                  },
+                  {
+                    "type": "string",
+                    "name": "error_msg",
+                    "required": false,
+                    "description": "错误信息"
+                  },
+                  {
+                    "type": "string",
+                    "name": "message",
+                    "required": false,
+                    "description": "错误信息"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 293.76533532411554,
+            "y": -181.64090934402446,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/372098605791453_1733129140009182679_PnsFgsWuUu.png?lk3s=cd508e2b&x-expires=1750404600&x-signature=8or2UJ6ceOvyv3p7Aa9x9atDaos%3D",
+            "apiName": "LinkReaderPlugin",
+            "pluginID": "7379227817307013129",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "是否需要返回图片url",
+                "input": {},
+                "name": "need_image_url",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "description": "网页url、pdf url、docx url、csv url、 xlsx url。",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "error_code",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误信息",
+                "input": {},
+                "name": "error_msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误信息",
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "pdf的内容",
+                "input": {},
+                "name": "pdf_content",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "网页的内容",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "content",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "images",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "url",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "width",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "alt",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "height",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "title",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "错误信息",
+                "input": {},
+                "name": "err_msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747812577,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "当你需要获取网页、pdf、doc、docx、xlsx、csv、text 内容时，使用此工具，可以获取url链接下的标题和内容。由于个别网站自身站点限制，无法获取网页内容。",
+            "title": "LinkReaderPlugin",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "146228",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1867.0223781210243,
+            "y": 7.94132425153105
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "生成图片",
+            "icon": "https://p26-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/8d35caff19ff49f9a8c14ff2ba49bc40~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1745667263&x-signature=7wVtZIG5fq1H0kouAaNlwVehkt0%3D",
+            "subtitle": "html2img:gen_img",
+            "title": "gen_img"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486447880522776611",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "gen_img",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7486447880522760227",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "html2img",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "默认800",
+                "input": {},
+                "name": "width",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "高度，默认自适应",
+                "input": {},
+                "name": "height",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "html",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "html",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "112767",
+                      "name": "html"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "image_url",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1687.0223781210243,
+            "y": 7.94132425153105,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1743074374246601536_oxCvXCTCuv.png?lk3s=cd508e2b&x-expires=1750404600&x-signature=Y6uSSgaf5Q31nG7fhh%2BjfZqKUmU%3D",
+            "apiName": "gen_img",
+            "pluginID": "7486447880522760227",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "默认800",
+                "input": {},
+                "name": "width",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "高度，默认自适应",
+                "input": {},
+                "name": "height",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "html",
+                "input": {},
+                "name": "html",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "image_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747720158,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "输入html内容直接渲染成图片",
+            "title": "gen_img",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "187251",
+        "targetNodeID": "167723"
+      },
+      {
+        "sourceNodeID": "167723",
+        "targetNodeID": "112767"
+      },
+      {
+        "sourceNodeID": "112767",
+        "targetNodeID": "187221"
+      },
+      {
+        "sourceNodeID": "112767",
+        "targetNodeID": "146228"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 293.76533532411554,
+    "y": -207.64090934402446,
+    "width": 1753.2570427969088,
+    "height": 353.4822335955555
+  }
+}

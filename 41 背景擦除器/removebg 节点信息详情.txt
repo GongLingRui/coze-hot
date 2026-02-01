@@ -1,0 +1,344 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7396953566327652389",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "156356",
+        "type": "13",
+        "meta": {
+          "position": {
+            "x": 988.2064030983053,
+            "y": -520.3111697897942
+          }
+        },
+        "data": {
+          "inputs": {
+            "content": {
+              "type": "string",
+              "value": {
+                "type": "literal",
+                "content": "正在删除背景，请稍等片刻"
+              }
+            },
+            "inputParameters": [],
+            "streamingOutput": false,
+            "callTransferVoice": true,
+            "chatHistoryWriting": "historyWrite"
+          },
+          "nodeMeta": {
+            "description": "支持中间过程的消息输出，支持流式和非流式两种方式",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "subTitle": "输出",
+            "title": "消息"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 808.2064030983053,
+            "y": -520.3111697897942,
+            "width": 360,
+            "height": 137.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "title": "输出",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "189919",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 914.6425965538988,
+            "y": -13.75
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "智能抠图:cutout",
+            "title": "cutout"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7438919188246429731",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "cutout",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7438919188246413347",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "智能抠图",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "assistType": 2,
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 7
+                    }
+                  }
+                }
+              },
+              {
+                "name": "only_mask",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "0"
+                  }
+                }
+              },
+              {
+                "name": "output_mode",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "0"
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "assistType": 2,
+              "name": "data",
+              "required": false,
+              "description": "透明背景图，在输出模式为透明背景时生效"
+            },
+            {
+              "type": "string",
+              "name": "mask",
+              "required": false,
+              "description": "抠图区域蒙板矢量图，在输出模式为蒙版矢量图时生效"
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 734.6425965538988,
+            "y": -13.75,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/1682717607724762_1737442217436398717_QfrWIv9q70.jpg?lk3s=cd508e2b&x-expires=1750404266&x-signature=EM6Z442G794YyHep0miQC25UqKw%3D",
+            "apiName": "cutout",
+            "pluginID": "7438919188246413347",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7352795533666664448",
+            "inputs": [
+              {
+                "description": "自定义抠图内容的提示词，不填时默认保留主体抠图",
+                "input": {},
+                "name": "prompt",
+                "required": false,
+                "title": "提示词",
+                "type": "string"
+              },
+              {
+                "assistType": 2,
+                "description": "待抠图的图片",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "title": "上传图",
+                "type": "image"
+              },
+              {
+                "defaultValue": 0,
+                "description": "结果图尺寸，支持返回抠图结果尺寸(去除透明长宽)和原图尺寸, enum list is [0,3], default value is 0",
+                "enum": [
+                  0,
+                  3
+                ],
+                "enumVarNames": [
+                  "抠图结果尺寸",
+                  "原图尺寸"
+                ],
+                "input": {},
+                "name": "only_mask",
+                "required": false,
+                "title": "产物尺寸",
+                "type": "integer"
+              },
+              {
+                "defaultValue": 0,
+                "description": "输出图模式，可选透明背景图/蒙版矢量图, enum list is [0,1], default value is 0",
+                "enum": [
+                  0,
+                  1
+                ],
+                "enumVarNames": [
+                  "透明背景图",
+                  "蒙版矢量图"
+                ],
+                "input": {},
+                "name": "output_mode",
+                "required": false,
+                "title": "输出图模式",
+                "type": "integer"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "assistType": 2,
+                "description": "透明背景图，在输出模式为透明背景时生效",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "type": "image"
+              },
+              {
+                "description": "抠图区域蒙板矢量图，在输出模式为蒙版矢量图时生效",
+                "input": {},
+                "name": "mask",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747808772,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "",
+            "title": "cutout",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": 734.6425965538988,
+    "y": -520.3111697897942,
+    "width": 433.56380654440636,
+    "height": 620.4611697897942
+  }
+}

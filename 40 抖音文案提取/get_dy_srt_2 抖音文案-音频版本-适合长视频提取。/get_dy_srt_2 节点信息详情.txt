@@ -1,0 +1,826 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7491832118676471817",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "103711",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 640,
+            "y": 208.39999999999998
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"这个插件批处理的时候设置并发为1\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"避免限制频次出错\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 520,
+            "y": 208.39999999999998,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "147594",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1100,
+            "y": 208.39999999999998
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"⚠️注意事项\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"并发不能设置太高\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 980,
+            "y": 208.39999999999998,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "145037",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 640,
+            "y": 0
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "提取抖音文案，返回视频的音频，配合语音识别使用",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "抖音文案:wenan",
+            "title": "wenan"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7482560139611062323",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "wenan",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7482560139611045939",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "抖音文案",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "dy_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "video_url",
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "audio_info",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "file_cs",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "height",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "url_key",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "width",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "data_size",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "file_hash",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "uri",
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "url_list",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "audio_url",
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "video_info",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "integer",
+                        "name": "data_size",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "file_cs",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "height",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "url_key",
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "url_list",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "file_hash",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "uri",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "width",
+                        "required": false
+                      }
+                    ]
+                  },
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": 0,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1742169251946202044_bCNCINPDBd.png?lk3s=cd508e2b&x-expires=1750402561&x-signature=mwTQ6VO9oJG61wR5ZEoIebpcUTM%3D",
+            "apiName": "wenan",
+            "pluginID": "7482560139611045939",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "抖音分享链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "获取：https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "audio_info",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "file_cs",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "file_hash",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "height",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "url_key",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "data_size",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "uri",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "url_list",
+                          "required": false,
+                          "schema": {
+                            "assistType": 0,
+                            "type": "string"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "width",
+                          "required": false,
+                          "type": "integer"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "audio_url",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "video_info",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "file_hash",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "height",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "uri",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "data_size",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "file_cs",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "url_key",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "url_list",
+                          "required": false,
+                          "schema": {
+                            "assistType": 0,
+                            "type": "string"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "width",
+                          "required": false,
+                          "type": "integer"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "video_url",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747794011,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "提取抖音文案，返回视频的音频，配合语音识别使用",
+            "title": "wenan",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "147603",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1100,
+            "y": 0
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "读取音频url链接，并将音频转为文字",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "语音转文本:SpeechToText",
+            "title": "SpeechToText"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7366504288144785434",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "SpeechToText",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7366504288144769050",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "语音转文本",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "145037",
+                      "name": "data.audio_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false,
+              "description": "错误码"
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "msg",
+                  "required": false,
+                  "description": "额外信息"
+                },
+                {
+                  "type": "string",
+                  "name": "text",
+                  "required": false,
+                  "description": "音频转化后的文字"
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false,
+              "description": "日志ID"
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false,
+              "description": "额外信息"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 920,
+            "y": 0,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/143398405153839_1709811094256792487_FBiDvbOVxv.jpeg?lk3s=cd508e2b&x-expires=1750402561&x-signature=eSwzDAABJJOhIjjaqK5E4KhjMmg%3D",
+            "apiName": "SpeechToText",
+            "pluginID": "7366504288144769050",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "音频url链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "额外信息",
+                    "input": {},
+                    "name": "msg",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "description": "音频转化后的文字",
+                    "input": {},
+                    "name": "text",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志ID",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "额外信息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              }
+            ],
+            "updateTime": 1747810158,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "读取音频url链接，并将音频转为文字",
+            "title": "SpeechToText",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "145037",
+        "targetNodeID": "147603"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 460,
+    "y": 0,
+    "width": 820,
+    "height": 358.4
+  }
+}

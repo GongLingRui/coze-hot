@@ -1,0 +1,1371 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7492227273094316047",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "155284",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 748.5014104116967,
+            "y": 53.74792467993197
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "输入视频平台的分享链接",
+            "icon": "https://p26-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/f1b318f1caf547a68fff70586eda764d~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1747012103&x-signature=hsZgIaJu0g%2F989wYHHGDNNy1FBU%3D",
+            "subtitle": "视频全平台下载:download",
+            "title": "download"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7487889088326991887",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "download",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7377228668269084672",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频全平台下载",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "share_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            },
+            {
+              "type": "float",
+              "name": "code",
+              "required": false
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "test",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "title",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "photo",
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "pics",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "float",
+              "name": "exec_time",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "ip",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 568.5014104116967,
+            "y": 53.74792467993197,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1717643723692214488_3H8mcHZsvv.webp?lk3s=cd508e2b&x-expires=1750402363&x-signature=UmiLvHIP1xPGGRdKoq%2FGhQWbVa0%3D",
+            "apiName": "download",
+            "pluginID": "7377228668269084672",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7373865327308144674",
+            "inputs": [
+              {
+                "description": "获取地址：https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "视频的分享链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "test",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "title",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "url",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "photo",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "pics",
+                    "required": false,
+                    "schema": {
+                      "assistType": 0,
+                      "type": "string"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "exec_time",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "input": {},
+                "name": "ip",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747804273,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "输入视频平台的分享链接",
+            "title": "download",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "185230",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1208.5014104116967,
+            "y": -421.8807523215552
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "定数抽帧，根据视频时长/抽取帧数计算间隔动态抽帧。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "视频工具:frame_extractor_by_count",
+            "title": "frame_extractor_by_count"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238522404",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "frame_extractor_by_count",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238506020",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频工具",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "count",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": 5,
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "155284",
+                      "name": "data.url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false,
+              "description": "错误码"
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "list",
+                  "name": "chunks",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "float",
+                        "name": "index",
+                        "required": false,
+                        "description": "帧的序号, 从 0 开始"
+                      },
+                      {
+                        "type": "string",
+                        "name": "screenshot",
+                        "required": false,
+                        "description": "帧对应的 URL"
+                      },
+                      {
+                        "type": "float",
+                        "name": "timestamp_ms",
+                        "required": false,
+                        "description": "帧对应的时间戳, 单位: ms"
+                      }
+                    ]
+                  },
+                  "required": false,
+                  "description": "抽帧结果"
+                }
+              ],
+              "required": false,
+              "description": "返回数据"
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false,
+              "description": "日志 id"
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false,
+              "description": "错误消息"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1028.5014104116967,
+            "y": -421.8807523215552,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/7064468330176_1744184218169052068_XydqppUnuQ.png?lk3s=cd508e2b&x-expires=1750402363&x-signature=Y9F22VeZkfTQ9mMnJ4sNxuNgRuU%3D",
+            "apiName": "frame_extractor_by_count",
+            "pluginID": "7491322136238506020",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "抽取多少个帧",
+                "input": {},
+                "name": "count",
+                "required": true,
+                "type": "integer"
+              },
+              {
+                "description": "视频 URL",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "返回数据",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "抽帧结果",
+                    "input": {},
+                    "name": "chunks",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "description": "帧的序号, 从 0 开始",
+                          "input": {},
+                          "name": "index",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "帧对应的 URL",
+                          "input": {},
+                          "name": "screenshot",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "帧对应的时间戳, 单位: ms",
+                          "input": {},
+                          "name": "timestamp_ms",
+                          "required": false,
+                          "type": "float"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志 id",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误消息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747809780,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "定数抽帧，根据视频时长/抽取帧数计算间隔动态抽帧。",
+            "title": "frame_extractor_by_count",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "186955",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1208.5014104116967,
+            "y": 53.74792467993197
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "等时抽帧，从 start_time_ms 开始，每隔 interval_ms 时间抽帧一次。",
+            "icon": "https://p26-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/782ef6f894f44326903d7ff5774027f1~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1747012170&x-signature=zXCTkANRMZ6J5WftpWpLhk5%2BPek%3D",
+            "subtitle": "视频工具:frame_extractor_by_interval",
+            "title": "frame_extractor_by_interval"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238538788",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "frame_extractor_by_interval",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238506020",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频工具",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "interval_ms",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": 1000,
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "155284",
+                      "name": "data.url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false,
+              "description": "错误码"
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "list",
+                  "name": "chunks",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "screenshot",
+                        "required": false,
+                        "description": "抽帧图片 URL"
+                      },
+                      {
+                        "type": "float",
+                        "name": "timestamp_ms",
+                        "required": false,
+                        "description": "抽帧对应的时间戳，单位: ms"
+                      },
+                      {
+                        "type": "float",
+                        "name": "index",
+                        "required": false,
+                        "description": "第几个抽帧"
+                      }
+                    ]
+                  },
+                  "required": false,
+                  "description": "抽帧结果"
+                }
+              ],
+              "required": false,
+              "description": "返回数据"
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false,
+              "description": "日志 id"
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false,
+              "description": "错误信息"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1028.5014104116967,
+            "y": 53.74792467993197,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/7064468330176_1744184218169052068_XydqppUnuQ.png?lk3s=cd508e2b&x-expires=1750402363&x-signature=G1vqo57N4uI70ZHLmtyBNkWyWW4%3D",
+            "apiName": "frame_extractor_by_interval",
+            "pluginID": "7491322136238506020",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "视频 URL",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "间隔抽帧时间, 单位: ms",
+                "input": {},
+                "name": "interval_ms",
+                "required": true,
+                "type": "float"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "返回数据",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "抽帧结果",
+                    "input": {},
+                    "name": "chunks",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "description": "第几个抽帧",
+                          "input": {},
+                          "name": "index",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "抽帧图片 URL",
+                          "input": {},
+                          "name": "screenshot",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "抽帧对应的时间戳，单位: ms",
+                          "input": {},
+                          "name": "timestamp_ms",
+                          "required": false,
+                          "type": "float"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志 id",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误信息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              }
+            ],
+            "updateTime": 1747809780,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "等时抽帧，从 start_time_ms 开始，每隔 interval_ms 时间抽帧一次。",
+            "title": "frame_extractor_by_interval",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "156753",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1208.5014104116967,
+            "y": 517.1479246799319
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "抽取关键帧",
+            "icon": "https://p3-flow-product-sign.byteimg.com/tos-cn-i-13w3uml6bg/782ef6f894f44326903d7ff5774027f1~tplv-13w3uml6bg-resize:128:128.image?rk3s=2e2596fd&x-expires=1747012178&x-signature=KZPlZ2O%2F6jxlunxhukbozKgubB8%3D",
+            "subtitle": "视频工具:frame_extractor_by_key_frame",
+            "title": "frame_extractor_by_key_frame"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322158728085540",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "frame_extractor_by_key_frame",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491322136238506020",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "视频工具",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "155284",
+                      "name": "data.url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "float",
+              "name": "code",
+              "required": false,
+              "description": "错误码"
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "list",
+                  "name": "chunks",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "float",
+                        "name": "index",
+                        "required": false,
+                        "description": "第几个帧"
+                      },
+                      {
+                        "type": "string",
+                        "name": "screenshot",
+                        "required": false,
+                        "description": "帧的 URL"
+                      },
+                      {
+                        "type": "float",
+                        "name": "timestamp_ms",
+                        "required": false,
+                        "description": "帧的时间戳, 单位: ms"
+                      }
+                    ]
+                  },
+                  "required": false,
+                  "description": "视频帧"
+                }
+              ],
+              "required": false,
+              "description": "返回数据"
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false,
+              "description": "日志 id"
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false,
+              "description": "错误消息"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1028.5014104116967,
+            "y": 517.1479246799319,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/7064468330176_1744184218169052068_XydqppUnuQ.png?lk3s=cd508e2b&x-expires=1750402363&x-signature=Akvs%2BuRBmgRPHGWstTuTFZPEIrc%3D",
+            "apiName": "frame_extractor_by_key_frame",
+            "pluginID": "7491322136238506020",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "视频 URL",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "description": "错误消息",
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "错误码",
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "float"
+              },
+              {
+                "description": "返回数据",
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "description": "视频帧",
+                    "input": {},
+                    "name": "chunks",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "description": "第几个帧",
+                          "input": {},
+                          "name": "index",
+                          "required": false,
+                          "type": "float"
+                        },
+                        {
+                          "description": "帧的 URL",
+                          "input": {},
+                          "name": "screenshot",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "帧的时间戳, 单位: ms",
+                          "input": {},
+                          "name": "timestamp_ms",
+                          "required": false,
+                          "type": "float"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "description": "日志 id",
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747809780,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "抽取关键帧",
+            "title": "frame_extractor_by_key_frame",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "188595",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1148.5014104116967,
+            "y": -213.866698538411
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"根据次数提取，各种计算间隔。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1028.5014104116967,
+            "y": -213.866698538411,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "111042",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1148.5014104116967,
+            "y": 255.24547694020916
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"设定间隔时间去提取，输入1000代表每隔1秒提取一次。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1028.5014104116967,
+            "y": 255.24547694020916,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "116685",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1197.894041468275,
+            "y": 668.1679819001293
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"自动根据画面计算关键帧。提取出不同的画面。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1077.894041468275,
+            "y": 668.1679819001293,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "155284",
+        "targetNodeID": "185230"
+      },
+      {
+        "sourceNodeID": "155284",
+        "targetNodeID": "186955"
+      },
+      {
+        "sourceNodeID": "155284",
+        "targetNodeID": "156753"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 568.5014104116967,
+    "y": -421.8807523215552,
+    "width": 820,
+    "height": 1240.0487342216845
+  }
+}

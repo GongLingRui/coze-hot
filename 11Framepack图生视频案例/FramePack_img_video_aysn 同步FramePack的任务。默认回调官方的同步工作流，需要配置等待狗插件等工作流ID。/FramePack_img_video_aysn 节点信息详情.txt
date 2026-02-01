@@ -1,0 +1,2445 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7496719415272194060",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "137421",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 389.625,
+            "y": -97.39825909350377
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "获取表格数据。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "超级多维表格:get_table",
+            "title": "get_table"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807084082",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "get_table",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807051314",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "超级多维表格",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "table_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "name",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "任务ID",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "boolean",
+              "name": "success",
+              "required": false
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "object",
+                  "name": "pagination",
+                  "schema": [
+                    {
+                      "type": "integer",
+                      "name": "page_size",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_pages",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_rows",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "page",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "result",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "list",
+                        "name": "datas",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "table_name",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "web_url",
+                  "required": false
+                }
+              ],
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 209.625,
+            "y": -97.39825909350377,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1744875568665984095_deERtemtUV.png?lk3s=cd508e2b&x-expires=1750400407&x-signature=SzPxCCLk1HXRhHAPnMmY6uaHUq0%3D",
+            "apiName": "get_table",
+            "pluginID": "7494245680807051314",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "列名，不填写默认所有数据。",
+                "input": {},
+                "name": "name",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "默认1",
+                "input": {},
+                "name": "page",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "大小，默认100",
+                "input": {},
+                "name": "page_size",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "表格ID",
+                "input": {},
+                "name": "table_id",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "pagination",
+                    "required": false,
+                    "schema": [
+                      {
+                        "input": {},
+                        "name": "page",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "page_size",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_pages",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_rows",
+                        "required": false,
+                        "type": "integer"
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "input": {},
+                    "name": "result",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "datas",
+                          "required": false,
+                          "schema": {
+                            "assistType": 0,
+                            "type": "string"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "table_name",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "web_url",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "success",
+                "required": false,
+                "type": "boolean"
+              }
+            ],
+            "updateTime": 1747801875,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "获取表格数据。",
+            "title": "get_table",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "196456",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 2838.789973717044,
+            "y": -78.48369720465226
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "保存列表数据。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "超级多维表格:save_list",
+            "title": "save_list"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807100466",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "save_list",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807051314",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "超级多维表格",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "datas",
+                "input": {
+                  "type": "list",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "161044",
+                      "name": "video_urls"
+                    },
+                    "rawMeta": {
+                      "type": 99
+                    }
+                  }
+                }
+              },
+              {
+                "name": "name",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "视频",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "table_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "list",
+                  "name": "updated_rows",
+                  "schema": {
+                    "type": "integer"
+                  },
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "added_rows",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "message",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "table_id",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "total_rows",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "success",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "web_url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 2658.789973717044,
+            "y": -78.48369720465226,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1744875568665984095_deERtemtUV.png?lk3s=cd508e2b&x-expires=1750400407&x-signature=4abe9pKj0%2FqurILaWEX9djao0v4%3D",
+            "apiName": "save_list",
+            "pluginID": "7494245680807051314",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "列对应的内容列表",
+                "input": {},
+                "name": "datas",
+                "required": true,
+                "schema": {
+                  "assistType": 0,
+                  "type": "string"
+                },
+                "type": "list"
+              },
+              {
+                "description": "列名",
+                "input": {},
+                "name": "name",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "表格ID，默认自动创建，设置后就操作同一个表格。",
+                "input": {},
+                "name": "table_id",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "web_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "added_rows",
+                    "required": false,
+                    "schema": {
+                      "assistType": 0,
+                      "type": "string"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "message",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "table_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "total_rows",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "updated_rows",
+                    "required": false,
+                    "schema": {
+                      "type": "integer"
+                    },
+                    "type": "list"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "success",
+                "required": false,
+                "type": "boolean"
+              }
+            ],
+            "updateTime": 1747801875,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "保存列表数据。",
+            "title": "save_list",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "123395",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 3437.25,
+            "y": -72.50489440930455
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "获取表格数据。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "超级多维表格:get_table",
+            "title": "get_table_1"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807084082",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "get_table",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7494245680807051314",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "超级多维表格",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "table_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "object",
+                  "name": "pagination",
+                  "schema": [
+                    {
+                      "type": "integer",
+                      "name": "page_size",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_pages",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "total_rows",
+                      "required": false
+                    },
+                    {
+                      "type": "integer",
+                      "name": "page",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "type": "list",
+                  "name": "result",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "list",
+                        "name": "datas",
+                        "schema": {
+                          "type": "string"
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "table_name",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "web_url",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "success",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 3257.25,
+            "y": -72.50489440930455,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1744875568665984095_deERtemtUV.png?lk3s=cd508e2b&x-expires=1750400407&x-signature=SzPxCCLk1HXRhHAPnMmY6uaHUq0%3D",
+            "apiName": "get_table",
+            "pluginID": "7494245680807051314",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "列名，不填写默认所有数据。",
+                "input": {},
+                "name": "name",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "默认1",
+                "input": {},
+                "name": "page",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "大小，默认100",
+                "input": {},
+                "name": "page_size",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "表格ID",
+                "input": {},
+                "name": "table_id",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "pagination",
+                    "required": false,
+                    "schema": [
+                      {
+                        "input": {},
+                        "name": "page",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "page_size",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_pages",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "total_rows",
+                        "required": false,
+                        "type": "integer"
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "input": {},
+                    "name": "result",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "datas",
+                          "required": false,
+                          "schema": {
+                            "assistType": 0,
+                            "type": "string"
+                          },
+                          "type": "list"
+                        },
+                        {
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "table_name",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "web_url",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "success",
+                "required": false,
+                "type": "boolean"
+              }
+            ],
+            "updateTime": 1747801875,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "获取表格数据。",
+            "title": "get_table",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "105164",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 397.5,
+            "y": 148.5
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"获取任务列表\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 277.5,
+            "y": 148.5,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "177407",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 824.5,
+            "y": 140.5
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"同步任务海螺任务数据\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 704.5,
+            "y": 140.5,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "115797",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1235.5,
+            "y": 140.5
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"提取视频链接\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1115.5,
+            "y": 140.5,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "156702",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 2817.596525369763,
+            "y": 88.34390688365383
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"保存视频链接\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 2697.596525369763,
+            "y": 88.34390688365383,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "161044",
+        "type": "5",
+        "meta": {
+          "position": {
+            "x": 1295.5,
+            "y": -65.48369720465226
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "编写代码，处理输入变量来生成返回值",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "subTitle": "代码",
+            "title": "代码"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "list",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "object",
+                        "name": "data",
+                        "schema": [
+                          {
+                            "type": "list",
+                            "name": "nodeInfo",
+                            "schema": {
+                              "type": "object",
+                              "schema": [
+                                {
+                                  "type": "string",
+                                  "name": "created_at",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "field_name",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "field_value",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "id",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "node_id",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "task_id",
+                                  "required": false
+                                }
+                              ]
+                            },
+                            "required": false
+                          },
+                          {
+                            "type": "list",
+                            "name": "outputInfo",
+                            "schema": {
+                              "type": "object",
+                              "schema": [
+                                {
+                                  "type": "string",
+                                  "name": "file_type",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "file_url",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "id",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "node_id",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "task_id",
+                                  "required": false
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "cost_time",
+                                  "required": false
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "created_at",
+                                  "required": false
+                                }
+                              ]
+                            },
+                            "required": false
+                          },
+                          {
+                            "type": "object",
+                            "name": "taskInfo",
+                            "schema": [
+                              {
+                                "type": "string",
+                                "name": "status",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "task_id",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "updated_at",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "workflow_id",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "completed_at",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "cost_time",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "created_at",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "id",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "rn_task_id",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "api_key",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "msg",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "prompt_tips",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "user_id",
+                                "required": false
+                              },
+                              {
+                                "type": "string",
+                                "name": "client_id",
+                                "required": false
+                              },
+                              {
+                                "type": "integer",
+                                "name": "webapp_id",
+                                "required": false
+                              }
+                            ],
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "message",
+                        "required": false
+                      }
+                    ]
+                  },
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "125369",
+                      "name": "outputList"
+                    },
+                    "rawMeta": {
+                      "type": 103
+                    }
+                  }
+                }
+              }
+            ],
+            "code": "async function main({ params }: Args): Promise<Output> {\n    let video_urls = []\n    let completed_count = 0\n    let not_completed_count = 0\n    let total_count = params.input.length\n    \n    for(let item of params.input){\n        let video_url = ''\n        \n        if(item.data.taskInfo.status != \"COMPLETED\"){\n            not_completed_count++\n        }else{\n            completed_count++\n            video_url = item.data.outputInfo[0].file_url\n            video_urls.push(video_url)\n        }\n    }\n\n    return {\n        'key0': completed_count === total_count,\n        'video_urls': video_urls,\n        'completed_count': completed_count,\n        'not_completed_count': not_completed_count,\n        'total_count': total_count\n    };\n}",
+            "language": 5,
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 60000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "boolean",
+              "name": "key0",
+              "required": false
+            },
+            {
+              "type": "list",
+              "name": "video_urls",
+              "schema": {
+                "type": "string"
+              },
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "completed_count",
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "not_completed_count",
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "total_count",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1115.5,
+            "y": -65.48369720465226,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg",
+            "description": "编写代码，处理输入变量来生成返回值",
+            "title": "代码",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "126930",
+        "type": "8",
+        "meta": {
+          "position": {
+            "x": 1832.3836969821632,
+            "y": -91.48369720465226
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "连接多个下游分支，若设定的条件成立则仅运行对应的分支，若均不成立则只运行“否则”分支",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Condition-v2.jpg",
+            "mainColor": "#00B2B2",
+            "subTitle": "选择器",
+            "title": "选择器"
+          },
+          "inputs": {
+            "branches": [
+              {
+                "condition": {
+                  "logic": 2,
+                  "conditions": [
+                    {
+                      "operator": 11,
+                      "left": {
+                        "input": {
+                          "type": "boolean",
+                          "value": {
+                            "type": "ref",
+                            "content": {
+                              "source": "block-output",
+                              "blockID": "161044",
+                              "name": "key0"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1652.3836969821632,
+            "y": -91.48369720465226,
+            "width": 360,
+            "height": 139.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Condition-v2.jpg",
+            "description": "连接多个下游分支，若设定的条件成立则仅运行对应的分支，若均不成立则只运行“否则”分支",
+            "title": "选择器",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "100541",
+        "type": "13",
+        "meta": {
+          "position": {
+            "x": 2933.7708987961446,
+            "y": 361.68523056215787
+          }
+        },
+        "data": {
+          "inputs": {
+            "content": {
+              "type": "string",
+              "value": {
+                "type": "literal",
+                "content": "任务还未完成，请重新同步。"
+              }
+            },
+            "inputParameters": [],
+            "streamingOutput": false,
+            "callTransferVoice": true,
+            "chatHistoryWriting": "historyWrite"
+          },
+          "nodeMeta": {
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "mainColor": "#5C62FF",
+            "subTitle": "输出",
+            "title": "输出"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 2753.7708987961446,
+            "y": 361.68523056215787,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Output-v2.jpg",
+            "description": "节点从“消息”更名为“输出”，支持中间过程的消息输出，支持流式和非流式两种方式",
+            "title": "输出",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "132869",
+        "type": "32",
+        "meta": {
+          "position": {
+            "x": 3894.415566420245,
+            "y": 59.8724718304472
+          }
+        },
+        "data": {
+          "inputs": {
+            "mergeGroups": [
+              {
+                "name": "Group1",
+                "variables": [
+                  {
+                    "type": "string",
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "123395",
+                        "name": "data.web_url"
+                      },
+                      "rawMeta": {
+                        "type": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "string",
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "194501",
+                        "name": "output"
+                      },
+                      "rawMeta": {
+                        "type": 1
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "nodeMeta": {
+            "description": "对多个分支的输出进行聚合处理",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/VariableMerge-icon.jpg",
+            "mainColor": "#00B2B2",
+            "subTitle": "变量聚合",
+            "title": "变量聚合"
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "Group1"
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 3714.415566420245,
+            "y": 59.8724718304472,
+            "width": 360,
+            "height": 115.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/VariableMerge-icon.jpg",
+            "description": "对多个分支的输出进行聚合处理",
+            "title": "变量聚合",
+            "mainColor": "#00B2B2"
+          }
+        }
+      },
+      {
+        "id": "194501",
+        "type": "15",
+        "meta": {
+          "position": {
+            "x": 3414.0932326081947,
+            "y": 202.87885119630252
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "用于处理多个字符串类型变量的格式",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-StrConcat-v2.jpg",
+            "mainColor": "#3071F2",
+            "subTitle": "文本处理",
+            "title": "文本处理"
+          },
+          "inputs": {
+            "method": "concat",
+            "inputParameters": [],
+            "concatParams": [
+              {
+                "name": "concatResult",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "任务还未完成，请重新同步。",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "arrayItemConcatChar",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "，",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "allArrayItemConcatChars",
+                "input": {
+                  "type": "list",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "label",
+                        "required": true
+                      },
+                      {
+                        "type": "string",
+                        "name": "value",
+                        "required": true
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "isDefault",
+                        "required": true
+                      }
+                    ]
+                  },
+                  "value": {
+                    "type": "literal",
+                    "content": [
+                      {
+                        "isDefault": true,
+                        "label": "换行",
+                        "value": "\n"
+                      },
+                      {
+                        "isDefault": true,
+                        "label": "制表符",
+                        "value": "\t"
+                      },
+                      {
+                        "isDefault": true,
+                        "label": "句号",
+                        "value": "。"
+                      },
+                      {
+                        "isDefault": true,
+                        "label": "逗号",
+                        "value": "，"
+                      },
+                      {
+                        "isDefault": true,
+                        "label": "分号",
+                        "value": "；"
+                      },
+                      {
+                        "isDefault": true,
+                        "label": "空格",
+                        "value": " "
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "output",
+              "required": true
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 3234.0932326081947,
+            "y": 202.87885119630252,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-StrConcat-v2.jpg",
+            "description": "用于处理多个字符串类型变量的格式",
+            "title": "文本处理",
+            "mainColor": "#3071F2"
+          }
+        }
+      },
+      {
+        "id": "125369",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 836.9375,
+            "y": -86.16958865508997
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "任务查询",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "comfyUI工具箱:task_info",
+            "title": "task_info"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7496503799889133602",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "task_info",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7496503799889035298",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "comfyUI工具箱",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "batch": {
+              "batchEnable": true,
+              "batchSize": 100,
+              "concurrentSize": 10,
+              "inputLists": [
+                {
+                  "name": "item1",
+                  "input": {
+                    "type": "list",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "ref",
+                      "content": {
+                        "source": "block-output",
+                        "blockID": "137421",
+                        "name": "data.result.datas"
+                      },
+                      "rawMeta": {
+                        "type": 99
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "inputParameters": [
+              {
+                "name": "task_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "125369",
+                      "name": "item1"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "list",
+              "name": "outputList",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "object",
+                    "name": "data",
+                    "schema": [
+                      {
+                        "type": "list",
+                        "name": "nodeInfo",
+                        "schema": {
+                          "type": "object",
+                          "schema": [
+                            {
+                              "type": "string",
+                              "name": "created_at",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "field_name",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "field_value",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "id",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "node_id",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "task_id",
+                              "required": false
+                            }
+                          ]
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "list",
+                        "name": "outputInfo",
+                        "schema": {
+                          "type": "object",
+                          "schema": [
+                            {
+                              "type": "string",
+                              "name": "file_type",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "file_url",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "id",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "node_id",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "task_id",
+                              "required": false
+                            },
+                            {
+                              "type": "integer",
+                              "name": "cost_time",
+                              "required": false
+                            },
+                            {
+                              "type": "string",
+                              "name": "created_at",
+                              "required": false
+                            }
+                          ]
+                        },
+                        "required": false
+                      },
+                      {
+                        "type": "object",
+                        "name": "taskInfo",
+                        "schema": [
+                          {
+                            "type": "string",
+                            "name": "status",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "task_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "updated_at",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "workflow_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "completed_at",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "cost_time",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "created_at",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "rn_task_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "api_key",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "msg",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "prompt_tips",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "user_id",
+                            "required": false
+                          },
+                          {
+                            "type": "string",
+                            "name": "client_id",
+                            "required": false
+                          },
+                          {
+                            "type": "integer",
+                            "name": "webapp_id",
+                            "required": false
+                          }
+                        ],
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "message",
+                    "required": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 656.9375,
+            "y": -86.16958865508997,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1745138846181337099_dfYBOeOeT0.png?lk3s=cd508e2b&x-expires=1750400407&x-signature=UMtJvItQXkZ6TXqf%2FuxkYZkC94g%3D",
+            "apiName": "task_info",
+            "pluginID": "7496503799889035298",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "create返回的task_id",
+                "input": {},
+                "name": "task_id",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "nodeInfo",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "created_at",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "field_name",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "field_value",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "id",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "node_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "task_id",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "outputInfo",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "id",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "node_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "task_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "cost_time",
+                          "required": false,
+                          "type": "integer"
+                        },
+                        {
+                          "input": {},
+                          "name": "created_at",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "file_type",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "file_url",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "taskInfo",
+                    "required": false,
+                    "schema": [
+                      {
+                        "input": {},
+                        "name": "completed_at",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "msg",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "rn_task_id",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "updated_at",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "user_id",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "workflow_id",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "client_id",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "id",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "api_key",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "cost_time",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "webapp_id",
+                        "required": false,
+                        "type": "integer"
+                      },
+                      {
+                        "input": {},
+                        "name": "created_at",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "prompt_tips",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "status",
+                        "required": false,
+                        "type": "string"
+                      },
+                      {
+                        "input": {},
+                        "name": "task_id",
+                        "required": false,
+                        "type": "string"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747374742,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "任务查询",
+            "title": "task_info",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "137421",
+        "targetNodeID": "125369"
+      },
+      {
+        "sourceNodeID": "126930",
+        "targetNodeID": "196456",
+        "sourcePortID": "true"
+      },
+      {
+        "sourceNodeID": "196456",
+        "targetNodeID": "123395"
+      },
+      {
+        "sourceNodeID": "123395",
+        "targetNodeID": "132869"
+      },
+      {
+        "sourceNodeID": "125369",
+        "targetNodeID": "161044"
+      },
+      {
+        "sourceNodeID": "161044",
+        "targetNodeID": "126930"
+      },
+      {
+        "sourceNodeID": "126930",
+        "targetNodeID": "100541",
+        "sourcePortID": "false"
+      },
+      {
+        "sourceNodeID": "100541",
+        "targetNodeID": "194501"
+      },
+      {
+        "sourceNodeID": "194501",
+        "targetNodeID": "132869"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 209.625,
+    "y": -97.39825909350377,
+    "width": 3864.790566420245,
+    "height": 572.9834896556616
+  }
+}

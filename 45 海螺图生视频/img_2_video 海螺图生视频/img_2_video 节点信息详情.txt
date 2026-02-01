@@ -1,0 +1,1112 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7491871885266599955",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "110463",
+        "type": "16",
+        "meta": {
+          "position": {
+            "x": 640,
+            "y": 0
+          }
+        },
+        "data": {
+          "inputs": {
+            "apiParam": null,
+            "inputParameters": [
+              {
+                "name": "text",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "prompt"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "modelSetting": {
+              "custom_ratio": {
+                "height": 1024,
+                "width": 1024
+              },
+              "ddim_steps": 25,
+              "images_reference": {},
+              "model": 8,
+              "ratio": 0
+            },
+            "prompt": {
+              "negative_prompt": "",
+              "prompt": "{{text}}"
+            },
+            "references": [],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 60000,
+              "retryTimes": 0
+            }
+          },
+          "nodeMeta": {
+            "description": "通过文字描述/添加参考图生成图片",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-ImageGeneration-v2.jpg",
+            "title": "图像生成",
+            "subTitle": "图像生成"
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "assistType": 2,
+              "name": "data",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            }
+          ],
+          "settings": null,
+          "version": ""
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": 0,
+            "width": 360,
+            "height": 165.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-ImageGeneration-v2.jpg",
+            "description": "通过文字描述/添加参考图生成图片",
+            "title": "图像生成",
+            "mainColor": "#FF4DC3"
+          }
+        }
+      },
+      {
+        "id": "157971",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1100,
+            "y": 26
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "海螺创建图生视频任务。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "海螺图生视频:st_create_task_list",
+            "title": "st_create_task_list"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491869556743520293",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "st_create_task_list",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7432232943004745778",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "海螺图生视频",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "image_url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "110463",
+                      "name": "data"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "prompt"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "u_id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "user_id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "downloadURL",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "image_url",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "originFiles",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "prompt",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "add_failed_count",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "canAppeal",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "canRetry",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "coverURL",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "height",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "width",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "video_id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "id",
+                  "required": false,
+                  "description": "使用st_get_task_info查询视频链接"
+                },
+                {
+                  "type": "string",
+                  "name": "modelID",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "status",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "videoURL",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "tip_url",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 920,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1741338848356099125_YqtwqBRpoR.png?lk3s=cd508e2b&x-expires=1750402442&x-signature=KebEvFFCJOArKvHlvx2uckn%2FPZk%3D",
+            "apiName": "st_create_task_list",
+            "pluginID": "7432232943004745778",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "提取地址：https://ts.fyshark.com/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "图片",
+                "input": {},
+                "name": "image_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "提示词",
+                "input": {},
+                "name": "prompt",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "add_failed_count",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "u_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "videoURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "video_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "modelID",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "user_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "canAppeal",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "created_at",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "height",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "image_url",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "prompt",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "status",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "width",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "canRetry",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "coverURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "downloadURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "description": "使用st_get_task_info查询视频链接",
+                    "input": {},
+                    "name": "id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "originFiles",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "tip_url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747793378,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "海螺创建图生视频任务。",
+            "title": "st_create_task_list",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "182633",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 1560,
+            "y": 26
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "获取任务信息。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "海螺图生视频:st_get_task_info",
+            "title": "st_get_task_info"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7491869556743536677",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "st_get_task_info",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7432232943004745778",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "海螺图生视频",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "task_id",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "157971",
+                      "name": "data.id"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "user_id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "downloadURL",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "prompt",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "u_id",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "videoURL",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "width",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "add_failed_count",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "coverURL",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "image_url",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "modelID",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "updated_at",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "canRetry",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "failed_msg",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "originFiles",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "status",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "video_id",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "canAppeal",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "downloadURLWithoutWatermark",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "height",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1380,
+            "y": 26,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf6-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1741338848356099125_YqtwqBRpoR.png?lk3s=cd508e2b&x-expires=1750402442&x-signature=HmqSXD1n3wY1%2B0ADsl5YPkdfmWk%3D",
+            "apiName": "st_get_task_info",
+            "pluginID": "7432232943004745778",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "任务ID",
+                "input": {},
+                "name": "task_id",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "videoURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "video_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "coverURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "originFiles",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "prompt",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "user_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "failed_msg",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "height",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "status",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "canAppeal",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "canRetry",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "downloadURL",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "downloadURLWithoutWatermark",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "created_at",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "u_id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "updated_at",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "width",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "add_failed_count",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "id",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "image_url",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "modelID",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747793378,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "获取任务信息。",
+            "title": "st_get_task_info",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "176656",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 580,
+            "y": 204.80532358667125
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"根据提示词画一张图\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 460,
+            "y": 204.80532358667125,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "153011",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1040,
+            "y": 196.20568382512266
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"根据图片和提示词提交海螺的图转视频的任务。\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"任务是异步进行的大概要等待4-10分钟。\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"后续使用要记录里面返回的id，根据id去查询结果。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 920,
+            "y": 196.20568382512266,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      },
+      {
+        "id": "101977",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 1500,
+            "y": 181.35176060062958
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"这个就是查询任务结果的节点，正常使用需要使用多次查询，要拆分两个工作流\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"一个提交任务\",\"type\":\"text\"}]},{\"type\":\"paragraph\",\"children\":[{\"text\":\"一个是查询任务。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 1380,
+            "y": 181.35176060062958,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "110463",
+        "targetNodeID": "157971"
+      },
+      {
+        "sourceNodeID": "157971",
+        "targetNodeID": "182633"
+      }
+    ]
+  },
+  "bounds": {
+    "x": 460,
+    "y": 0,
+    "width": 1280,
+    "height": 354.80532358667125
+  }
+}

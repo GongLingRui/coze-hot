@@ -1,0 +1,937 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7490877225379299347",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "192503",
+        "type": "3",
+        "meta": {
+          "position": {
+            "x": 1088.8552874788975,
+            "y": 210.85434202709055
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "subTitle": "大模型",
+            "title": "大模型"
+          },
+          "inputs": {
+            "inputParameters": [
+              {
+                "name": "input",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "104337",
+                      "name": "data.content"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "llmParam": [
+              {
+                "name": "temperature",
+                "input": {
+                  "type": "float",
+                  "value": {
+                    "type": "literal",
+                    "content": "0.8",
+                    "rawMeta": {
+                      "type": 4
+                    }
+                  }
+                }
+              },
+              {
+                "name": "maxTokens",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "2200",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "responseFormat",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "2",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modleName",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "DeepSeek-R1",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "modelType",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "1738675233",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "generationDiversity",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "balance",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "prompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "{{input}}",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "enableChatHistory",
+                "input": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "literal",
+                    "content": false,
+                    "rawMeta": {
+                      "type": 3
+                    }
+                  }
+                }
+              },
+              {
+                "name": "chatHistoryRound",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": "3",
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "systemPrompt",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "# Roles：\n-?你是一个写了10年抖音口播爆款文案的博主，你深知改写别人的文案是最容易爆火的，所以你专门研究文案改写\n\n# 改写规则：\n-需要先总结用户提供内容中的重点信息\n-改写文案要遵从平台规则，尽量不要出现一些违规词。\n-?请你时刻记住你的任务是生成抖音口播文案\n\n# 输出格式：\n这里输出你改写后的正文内容】\n\n严格按照<改写规则>和<输出格式>帮用户改写",
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "switch": false,
+              "processType": 1,
+              "timeoutMs": 600000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "output",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "reasoning_content",
+              "required": false
+            }
+          ],
+          "version": "3"
+        },
+        "_temp": {
+          "bounds": {
+            "x": 908.8552874788975,
+            "y": 210.85434202709055,
+            "width": 360,
+            "height": 165.9
+          },
+          "externalData": {
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg",
+            "description": "调用大语言模型,使用变量和提示词生成回复",
+            "title": "大模型",
+            "mainColor": "#5C62FF"
+          }
+        }
+      },
+      {
+        "id": "104337",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 458.4244074138712,
+            "y": 236.85434202709055
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "当你需要获取网页、pdf 内容时，使用此工具。可以获取url链接下的标题和内容。",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "头条搜索:browse",
+            "title": "browse"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7372463719307280411",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "browse",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7372463719307264027",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "头条搜索",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "用户针对网页的内容想问的问题",
+                "input": {},
+                "name": "prompt",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "用户想要获取信息的网页链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "193873",
+                      "name": "data.doc_results.url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "boolean",
+              "name": "ok",
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "code",
+              "required": false
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "string",
+                  "name": "content",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "title",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "errcode",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "errmsg",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 278.4244074138712,
+            "y": 236.85434202709055,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf9-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/847077809337655_1706633902722148439_ZnnUQFtsC3.png?lk3s=cd508e2b&x-expires=1750403076&x-signature=ASyxt5EbOc5CrPjc%2FY%2B142z2UA4%3D",
+            "apiName": "browse",
+            "pluginID": "7372463719307264027",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "用户针对网页的内容想问的问题",
+                "input": {},
+                "name": "prompt",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "用户想要获取信息的网页链接",
+                "input": {},
+                "name": "url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "errcode",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "input": {},
+                "name": "errmsg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "ok",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "content",
+                    "required": false,
+                    "type": "string"
+                  },
+                  {
+                    "input": {},
+                    "name": "title",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "updateTime": 1747811042,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "当你需要获取网页、pdf 内容时，使用此工具。可以获取url链接下的标题和内容。",
+            "title": "browse",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "193873",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": -103.10714516693135,
+            "y": 236.85434202709058
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "搜索用户询问的内容",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "头条搜索:search",
+            "title": "search"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7372463719307296795",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "search",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7372463719307264027",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "头条搜索",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputDefs": [
+              {
+                "description": "所需链接的数量限制，默认为10。",
+                "input": {},
+                "name": "count",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "搜索的偏移量，默认为0。",
+                "input": {},
+                "name": "cursor",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "当你需要搜索你不知道的信息，比如天气、汇率、时事等，这个工具非常有用。",
+                "input": {},
+                "name": "input_query",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "上次搜索返回的search_id，没有可为空",
+                "input": {},
+                "name": "search_id",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "count",
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "type": "literal",
+                    "content": 1,
+                    "rawMeta": {
+                      "type": 2
+                    }
+                  }
+                }
+              },
+              {
+                "name": "input_query",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "log_id",
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "ok",
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "code",
+              "required": false
+            },
+            {
+              "type": "object",
+              "name": "data",
+              "schema": [
+                {
+                  "type": "list",
+                  "name": "doc_results",
+                  "schema": {
+                    "type": "object",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "sitename",
+                        "required": false,
+                        "description": "the site name which url belongs to"
+                      },
+                      {
+                        "type": "string",
+                        "name": "summary",
+                        "required": false,
+                        "description": "the summary of the url content"
+                      },
+                      {
+                        "type": "string",
+                        "name": "title",
+                        "required": false,
+                        "description": "title of the url content"
+                      },
+                      {
+                        "type": "string",
+                        "name": "url",
+                        "required": false,
+                        "description": "link url"
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_more",
+                  "required": false
+                },
+                {
+                  "type": "string",
+                  "name": "search_id",
+                  "required": false
+                },
+                {
+                  "type": "integer",
+                  "name": "cursor",
+                  "required": false
+                }
+              ],
+              "required": false
+            },
+            {
+              "type": "integer",
+              "name": "errcode",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "errmsg",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": -283.10714516693133,
+            "y": 236.85434202709058,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf3-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/847077809337655_1706633902722148439_ZnnUQFtsC3.png?lk3s=cd508e2b&x-expires=1750403076&x-signature=IONQYSVqHx%2BCJldSJItEWD%2Fidbw%3D",
+            "apiName": "search",
+            "pluginID": "7372463719307264027",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7315016311652941851",
+            "inputs": [
+              {
+                "description": "所需链接的数量限制，默认为10。",
+                "input": {},
+                "name": "count",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "搜索的偏移量，默认为0。",
+                "input": {},
+                "name": "cursor",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "description": "当你需要搜索你不知道的信息，比如天气、汇率、时事等，这个工具非常有用。",
+                "input": {},
+                "name": "input_query",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "上次搜索返回的search_id，没有可为空",
+                "input": {},
+                "name": "search_id",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "code",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": [
+                  {
+                    "input": {},
+                    "name": "cursor",
+                    "required": false,
+                    "type": "integer"
+                  },
+                  {
+                    "input": {},
+                    "name": "doc_results",
+                    "required": false,
+                    "schema": {
+                      "schema": [
+                        {
+                          "description": "title of the url content",
+                          "input": {},
+                          "name": "title",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "link url",
+                          "input": {},
+                          "name": "url",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "the site name which url belongs to",
+                          "input": {},
+                          "name": "sitename",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "description": "the summary of the url content",
+                          "input": {},
+                          "name": "summary",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "input": {},
+                    "name": "has_more",
+                    "required": false,
+                    "type": "boolean"
+                  },
+                  {
+                    "input": {},
+                    "name": "search_id",
+                    "required": false,
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              },
+              {
+                "input": {},
+                "name": "errcode",
+                "required": false,
+                "type": "integer"
+              },
+              {
+                "input": {},
+                "name": "errmsg",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "log_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "ok",
+                "required": false,
+                "type": "boolean"
+              }
+            ],
+            "updateTime": 1747811042,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "搜索用户询问的内容",
+            "title": "search",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "104337",
+        "targetNodeID": "192503"
+      },
+      {
+        "sourceNodeID": "193873",
+        "targetNodeID": "104337"
+      }
+    ]
+  },
+  "bounds": {
+    "x": -283.10714516693133,
+    "y": 210.85434202709055,
+    "width": 1551.9624326458288,
+    "height": 165.9
+  }
+}

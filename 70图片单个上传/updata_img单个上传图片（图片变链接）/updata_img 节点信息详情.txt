@@ -1,0 +1,237 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7491152894700797979",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "116477",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 483.00000000000006,
+            "y": -25.75
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "缩放图片",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "缩放:resize",
+            "title": "resize"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7438918747382906895",
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "resize",
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7438918747382890511",
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "缩放",
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              },
+              {
+                "input": {
+                  "type": "integer",
+                  "value": {
+                    "content": "1735815422",
+                    "type": "literal"
+                  }
+                },
+                "name": "updateTime"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "image_url",
+                "input": {
+                  "type": "string",
+                  "assistType": 2,
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "input"
+                    },
+                    "rawMeta": {
+                      "type": 7
+                    }
+                  }
+                }
+              },
+              {
+                "name": "max_length",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "literal",
+                    "content": "1024"
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "assistType": 2,
+              "name": "data",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "msg",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 303.00000000000006,
+            "y": -25.75,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/1682717607724762_1737442238107853644_wmUPYZthbv.jpg?lk3s=cd508e2b&x-expires=1750402943&x-signature=I567Zf4Ol%2FuLvAuKnNCflxtXb5U%3D",
+            "apiName": "resize",
+            "pluginID": "7438918747382890511",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7352795533666664448",
+            "inputs": [
+              {
+                "assistType": 2,
+                "description": "原图",
+                "input": {},
+                "name": "image_url",
+                "required": true,
+                "title": "原图",
+                "type": "image"
+              },
+              {
+                "description": "图片缩放的最大尺寸，支持按长边/短边缩放，单位（像素）",
+                "input": {},
+                "name": "max_length",
+                "required": true,
+                "title": "最大尺寸",
+                "type": "integer"
+              },
+              {
+                "description": "缩放模式，按长边缩放为1，按短边缩放为2，默认为1",
+                "input": {},
+                "name": "mode",
+                "required": false,
+                "title": "缩放模式",
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "assistType": 2,
+                "input": {},
+                "name": "data",
+                "required": false,
+                "type": "image"
+              },
+              {
+                "input": {},
+                "name": "msg",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747791070,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "缩放图片",
+            "title": "resize",
+            "mainColor": "#CA61FF"
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": 303.00000000000006,
+    "y": -25.75,
+    "width": 359.99999999999994,
+    "height": 113.9
+  }
+}

@@ -1,0 +1,884 @@
+{
+  "type": "coze-workflow-clipboard-data",
+  "source": {
+    "workflowId": "7492667836360327231",
+    "flowMode": 0,
+    "spaceId": "7395390088370880563",
+    "isDouyin": false,
+    "host": "www.coze.cn"
+  },
+  "json": {
+    "nodes": [
+      {
+        "id": "108331",
+        "type": "4",
+        "meta": {
+          "position": {
+            "x": 504.336456255175,
+            "y": -14.25
+          }
+        },
+        "data": {
+          "nodeMeta": {
+            "description": "获取用户笔记",
+            "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Plugin-v2.jpg",
+            "subtitle": "小红书工具:get_user_note",
+            "title": "get_user_note"
+          },
+          "inputs": {
+            "apiParam": [
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7492627931890614309",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "get_user_note",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "apiName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "7492627931890597925",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginID"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "小红书工具",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginName"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "pluginVersion"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "tips"
+              },
+              {
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "content": "",
+                    "rawMeta": {
+                      "type": 1
+                    },
+                    "type": "literal"
+                  }
+                },
+                "name": "outDocLink"
+              }
+            ],
+            "inputParameters": [
+              {
+                "name": "api_token",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "api_token"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "note_url",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "user_url"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              },
+              {
+                "name": "lastCursor",
+                "input": {
+                  "type": "string",
+                  "value": {
+                    "type": "ref",
+                    "content": {
+                      "source": "block-output",
+                      "blockID": "100001",
+                      "name": "lastCursor"
+                    },
+                    "rawMeta": {
+                      "type": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "settingOnError": {
+              "processType": 1,
+              "timeoutMs": 180000,
+              "retryTimes": 0
+            }
+          },
+          "outputs": [
+            {
+              "type": "string",
+              "name": "tip_url",
+              "required": false
+            },
+            {
+              "type": "list",
+              "name": "data",
+              "schema": {
+                "type": "object",
+                "schema": [
+                  {
+                    "type": "string",
+                    "name": "desc",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "display_title",
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "inlikes",
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "is_goods_note",
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "niced",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "price",
+                    "required": false
+                  },
+                  {
+                    "type": "object",
+                    "name": "recommend",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "icon",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "target_id",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "target_name",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "track_id",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "type",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "desc",
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "share_count",
+                    "required": false
+                  },
+                  {
+                    "type": "list",
+                    "name": "ats",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "has_music",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "id",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "level",
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "sticky",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "title",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "type",
+                    "required": false
+                  },
+                  {
+                    "type": "object",
+                    "name": "user",
+                    "schema": [
+                      {
+                        "type": "string",
+                        "name": "userid",
+                        "required": false
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "followed",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "fstatus",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "images",
+                        "required": false
+                      },
+                      {
+                        "type": "string",
+                        "name": "nickname",
+                        "required": false
+                      },
+                      {
+                        "type": "integer",
+                        "name": "red_official_verify_type",
+                        "required": false
+                      }
+                    ],
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "collected_count",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "likes",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "nice_count",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "widgets_context",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "comments_count",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "create_time",
+                    "required": false
+                  },
+                  {
+                    "type": "string",
+                    "name": "cursor",
+                    "required": false
+                  },
+                  {
+                    "type": "list",
+                    "name": "images_list",
+                    "schema": {
+                      "type": "object",
+                      "schema": [
+                        {
+                          "type": "string",
+                          "name": "fileid",
+                          "required": false
+                        },
+                        {
+                          "type": "integer",
+                          "name": "height",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "original",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "trace_id",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "url",
+                          "required": false
+                        },
+                        {
+                          "type": "string",
+                          "name": "url_size_large",
+                          "required": false
+                        },
+                        {
+                          "type": "integer",
+                          "name": "width",
+                          "required": false
+                        }
+                      ]
+                    },
+                    "required": false
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "infavs",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "last_update_time",
+                    "required": false
+                  },
+                  {
+                    "type": "integer",
+                    "name": "view_count",
+                    "required": false
+                  }
+                ]
+              },
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_more",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "last_cursor",
+              "required": false
+            },
+            {
+              "type": "string",
+              "name": "message",
+              "required": false
+            },
+            {
+              "type": "boolean",
+              "name": "success",
+              "required": false
+            }
+          ]
+        },
+        "_temp": {
+          "bounds": {
+            "x": 324.336456255175,
+            "y": -14.25,
+            "width": 360,
+            "height": 113.9
+          },
+          "externalData": {
+            "icon": "https://lf26-appstore-sign.oceancloudapi.com/ocean-cloud-tos/plugin_icon/3778360647354254_1744508409113076090_XTquTuqsgq.png?lk3s=cd508e2b&x-expires=1750402164&x-signature=91beOF6JVlIP4o5ztzJQwK9vKP8%3D",
+            "apiName": "get_user_note",
+            "pluginID": "7492627931890597925",
+            "pluginProductStatus": 1,
+            "pluginProductUnlistType": 0,
+            "pluginType": 1,
+            "spaceID": "7391771569926127635",
+            "inputs": [
+              {
+                "description": "提取地址：https://www.51aigc.cc/#/userInfo",
+                "input": {},
+                "name": "api_token",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "description": "默认不填写，上一个分页的id",
+                "input": {},
+                "name": "lastCursor",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "description": "主页链接",
+                "input": {},
+                "name": "note_url",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "outputs": [
+              {
+                "input": {},
+                "name": "data",
+                "required": false,
+                "schema": {
+                  "schema": [
+                    {
+                      "input": {},
+                      "name": "is_goods_note",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "level",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "likes",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "cursor",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "has_music",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "price",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "sticky",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "view_count",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "widgets_context",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "collected_count",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "create_time",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "display_title",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "id",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "inlikes",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "nice_count",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "share_count",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "title",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "ats",
+                      "required": false,
+                      "schema": {
+                        "assistType": 0,
+                        "type": "string"
+                      },
+                      "type": "list"
+                    },
+                    {
+                      "input": {},
+                      "name": "comments_count",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "infavs",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "last_update_time",
+                      "required": false,
+                      "type": "integer"
+                    },
+                    {
+                      "input": {},
+                      "name": "niced",
+                      "required": false,
+                      "type": "boolean"
+                    },
+                    {
+                      "input": {},
+                      "name": "recommend",
+                      "required": false,
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "icon",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "target_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "target_name",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "track_id",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "type",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "desc",
+                          "required": false,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "input": {},
+                      "name": "type",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "user",
+                      "required": false,
+                      "schema": [
+                        {
+                          "input": {},
+                          "name": "userid",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "followed",
+                          "required": false,
+                          "type": "boolean"
+                        },
+                        {
+                          "input": {},
+                          "name": "fstatus",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "images",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "nickname",
+                          "required": false,
+                          "type": "string"
+                        },
+                        {
+                          "input": {},
+                          "name": "red_official_verify_type",
+                          "required": false,
+                          "type": "integer"
+                        }
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "input": {},
+                      "name": "desc",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "input": {},
+                      "name": "images_list",
+                      "required": false,
+                      "schema": {
+                        "schema": [
+                          {
+                            "input": {},
+                            "name": "trace_id",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "url",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "url_size_large",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "width",
+                            "required": false,
+                            "type": "integer"
+                          },
+                          {
+                            "input": {},
+                            "name": "fileid",
+                            "required": false,
+                            "type": "string"
+                          },
+                          {
+                            "input": {},
+                            "name": "height",
+                            "required": false,
+                            "type": "integer"
+                          },
+                          {
+                            "input": {},
+                            "name": "original",
+                            "required": false,
+                            "type": "string"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "type": "list"
+                    }
+                  ],
+                  "type": "object"
+                },
+                "type": "list"
+              },
+              {
+                "input": {},
+                "name": "has_more",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "input": {},
+                "name": "last_cursor",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "input": {},
+                "name": "success",
+                "required": false,
+                "type": "boolean"
+              },
+              {
+                "input": {},
+                "name": "tip_url",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "updateTime": 1747744827,
+            "latestVersionTs": "0",
+            "latestVersionName": "",
+            "versionName": "",
+            "description": "获取用户笔记",
+            "title": "get_user_note",
+            "mainColor": "#CA61FF"
+          }
+        }
+      },
+      {
+        "id": "150131",
+        "type": "31",
+        "meta": {
+          "position": {
+            "x": 440,
+            "y": 193.20860269108914
+          }
+        },
+        "data": {
+          "size": {
+            "height": 150,
+            "width": 240
+          },
+          "inputs": {
+            "schemaType": "slate",
+            "note": "[{\"type\":\"paragraph\",\"children\":[{\"text\":\"提取分图文笔记和视频笔记，注意看里面返回的内容。\",\"type\":\"text\"}]}]"
+          }
+        },
+        "_temp": {
+          "bounds": {
+            "x": 320,
+            "y": 193.20860269108914,
+            "width": 240,
+            "height": 150
+          },
+          "externalData": {
+            "icon": "comment_icon",
+            "description": "comment_desc",
+            "title": "注释",
+            "mainColor": ""
+          }
+        }
+      }
+    ],
+    "edges": []
+  },
+  "bounds": {
+    "x": 320,
+    "y": -14.25,
+    "width": 364.336456255175,
+    "height": 357.45860269108914
+  }
+}
